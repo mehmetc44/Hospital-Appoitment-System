@@ -47,7 +47,7 @@ namespace RandevuSistem
             panel1.Controls.Add(button7);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(871, 1000);
+            panel1.Size = new Size(924, 1000);
             panel1.TabIndex = 1;
             panel1.Paint += panel1_Paint_1;
             // 
@@ -105,7 +105,7 @@ namespace RandevuSistem
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             Controls.Add(panel1);
             Name = "Randevularım";
-            Size = new Size(816, 466);
+            Size = new Size(1179, 750);
             Load += Randevularım_Load;
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);

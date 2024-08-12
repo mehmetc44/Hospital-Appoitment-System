@@ -103,7 +103,7 @@
             panel1.Controls.Add(label1);
             panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(897, 547);
+            panel1.Size = new Size(1197, 747);
             panel1.TabIndex = 59;
             panel1.Paint += panel1_Paint;
             // 
@@ -114,7 +114,7 @@
             Controls.Add(panel1);
             Margin = new Padding(0);
             Name = "SifreYenile";
-            Size = new Size(900, 550);
+            Size = new Size(1200, 750);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);

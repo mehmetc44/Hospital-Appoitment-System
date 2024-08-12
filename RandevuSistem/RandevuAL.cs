@@ -337,7 +337,7 @@ namespace RandevuSistem
             MainMenu menu = new MainMenu
             {
                 Location = new System.Drawing.Point(0, 0),
-                Size = new System.Drawing.Size(900, 550)
+                Size = new System.Drawing.Size(1200, 750)
             };
             this.AutoScroll = false;
             menu.AutoScroll = false;

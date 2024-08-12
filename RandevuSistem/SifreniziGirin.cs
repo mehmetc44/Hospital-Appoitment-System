@@ -75,7 +75,7 @@ namespace RandevuSistem
             this.Controls.Clear();
             Profil profil = new Profil();
             profil.Location = new System.Drawing.Point(0, 0); // Konumu belirleyin
-            profil.Size = new System.Drawing.Size(900, 550); // Boyutu belirleyin
+            profil.Size = new System.Drawing.Size(1180, 730); // Boyutu belirleyin
             profil.AutoScroll = true;
             this.AutoScroll = false;
             this.Controls.Add(profil);

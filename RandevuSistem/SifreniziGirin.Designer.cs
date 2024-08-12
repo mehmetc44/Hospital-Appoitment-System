@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SifreniziGirin));
             panel1 = new Panel();
+            textBox3 = new TextBox();
+            label2 = new Label();
+            textBox2 = new TextBox();
+            label3 = new Label();
             button1 = new Button();
             textBox1 = new TextBox();
             button2 = new Button();
             label1 = new Label();
-            textBox2 = new TextBox();
-            label3 = new Label();
-            textBox3 = new TextBox();
-            label2 = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -53,9 +53,48 @@
             panel1.Controls.Add(label1);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(851, 646);
+            panel1.Size = new Size(1197, 750);
             panel1.TabIndex = 60;
             panel1.Paint += panel1_Paint;
+            // 
+            // textBox3
+            // 
+            textBox3.ForeColor = Color.Black;
+            textBox3.Location = new Point(240, 301);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(381, 27);
+            textBox3.TabIndex = 61;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = SystemColors.ActiveCaptionText;
+            label2.Location = new Point(240, 265);
+            label2.Name = "label2";
+            label2.Size = new Size(149, 20);
+            label2.TabIndex = 62;
+            label2.Text = "Yeni şifreniz(Tekrar)\n";
+            label2.Click += label2_Click;
+            // 
+            // textBox2
+            // 
+            textBox2.ForeColor = Color.Black;
+            textBox2.Location = new Point(240, 222);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(381, 27);
+            textBox2.TabIndex = 59;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = SystemColors.ActiveCaptionText;
+            label3.Location = new Point(240, 188);
+            label3.Name = "label3";
+            label3.Size = new Size(97, 20);
+            label3.TabIndex = 60;
+            label3.Text = "Yeni şifreniz:\r\n";
             // 
             // button1
             // 
@@ -102,46 +141,6 @@
             label1.Size = new Size(118, 20);
             label1.TabIndex = 55;
             label1.Text = "Şu anki şifreniz:\r\n";
-
-            // 
-            // textBox2
-            // 
-            textBox2.ForeColor = Color.Black;
-            textBox2.Location = new Point(240, 222);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(381, 27);
-            textBox2.TabIndex = 59;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = SystemColors.ActiveCaptionText;
-            label3.Location = new Point(240, 188);
-            label3.Name = "label3";
-            label3.Size = new Size(97, 20);
-            label3.TabIndex = 60;
-            label3.Text = "Yeni şifreniz:\r\n";
-            // 
-            // textBox3
-            // 
-            textBox3.ForeColor = Color.Black;
-            textBox3.Location = new Point(240, 301);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(381, 27);
-            textBox3.TabIndex = 61;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = SystemColors.ActiveCaptionText;
-            label2.Location = new Point(240, 265);
-            label2.Name = "label2";
-            label2.Size = new Size(149, 20);
-            label2.TabIndex = 62;
-            label2.Text = "Yeni şifreniz(Tekrar)\n";
-            label2.Click += label2_Click;
             // 
             // SifreniziGirin
             // 
@@ -149,7 +148,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(panel1);
             Name = "SifreniziGirin";
-            Size = new Size(900, 550);
+            Size = new Size(1200, 750);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);

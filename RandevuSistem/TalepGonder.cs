@@ -160,7 +160,7 @@ namespace RandevuSistem
             this.Controls.Clear();
             MainMenu menu = new MainMenu();
             menu.Location = new System.Drawing.Point(0, 0); // Konumu belirleyin
-            menu.Size = new System.Drawing.Size(900, 550); // Boyutu belirleyin
+            menu.Size = new System.Drawing.Size(1200, 750); // Boyutu belirleyin
             this.AutoScroll = false;
             menu.AutoScroll = false;
             this.Controls.Add(menu);

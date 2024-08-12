@@ -213,10 +213,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             BackColor = Color.Turquoise;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             Controls.Add(button2);
             Controls.Add(panel1);
             Name = "TalepGonder";
-            Size = new Size(795, 550);
+            Size = new Size(1200, 750);
             Load += TalepGonder_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

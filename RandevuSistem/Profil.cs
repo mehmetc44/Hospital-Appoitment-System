@@ -72,7 +72,7 @@ namespace RandevuSistem
             MainMenu menu = new MainMenu
             {
                 Location = new System.Drawing.Point(0, 0),
-                Size = new System.Drawing.Size(900, 550)
+                Size = new System.Drawing.Size(1200, 750)
             };
             this.AutoScroll = false;
             menu.AutoScroll = false;
@@ -100,10 +100,10 @@ namespace RandevuSistem
             BilgileriGuncelle BG = new BilgileriGuncelle
             {
                 Location = new System.Drawing.Point(0, 0),
-                Size = new System.Drawing.Size(900, 500),
+                Size = new System.Drawing.Size(1200, 750),
                 AutoScroll = true
             };
-            this.Size = new System.Drawing.Size(900, 500);
+            this.Size = new System.Drawing.Size(1200, 750);
             this.Controls.Add(BG);
         }
 
@@ -113,10 +113,10 @@ namespace RandevuSistem
             SifreniziGirin sg = new SifreniziGirin
             {
                 Location = new System.Drawing.Point(0, 0),
-                Size = new System.Drawing.Size(900, 500),
+                Size = new System.Drawing.Size(1200, 750),
                 AutoScroll = false
             };
-            this.Size = new System.Drawing.Size(900, 500);
+            this.Size = new System.Drawing.Size(1200, 750);
             this.AutoScroll = false;
             this.Controls.Add(sg);
         }

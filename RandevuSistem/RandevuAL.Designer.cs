@@ -120,7 +120,7 @@
             label1.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
             label1.Location = new Point(57, 71);
             label1.Name = "label1";
-            label1.Size = new Size(288, 38);
+            label1.Size = new Size(240, 38);
             label1.TabIndex = 1;
             label1.Text = "Randevu Bilgileri";
             label1.Click += label1_Click;
@@ -228,10 +228,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             BackColor = Color.FromArgb(0, 192, 192);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             Controls.Add(button2);
             Controls.Add(panel1);
             Name = "RandevuAL";
-            Size = new Size(879, 550);
+            Size = new Size(1200, 750);
             Load += RandevuAL_Load;
             ILGroupBox.ResumeLayout(false);
             panel1.ResumeLayout(false);

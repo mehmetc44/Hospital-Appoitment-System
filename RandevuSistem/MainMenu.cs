@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using RandevuSistem.ModernElements;
 namespace RandevuSistem
 {
     public partial class MainMenu : UserControl
@@ -21,38 +21,27 @@ namespace RandevuSistem
         private void InitializeComponent()
         {
             ComponentResourceManager resources = new ComponentResourceManager(typeof(MainMenu));
-            bildirimbuton = new Button();
-            talepbuton = new Button();
-            randevularımbuton = new Button();
-            randevubuton = new Button();
-            button1 = new Button();
-            label1 = new Label();
-            label2 = new Label();
+            talepbuton = new ModernButton();
+            randevularımbuton = new ModernButton();
+            randevubuton = new ModernButton();
+            panel1 = new Panel();
+            button1 = new ModernButton();
+            panel2 = new Panel();
+            panel1.SuspendLayout();
             SuspendLayout();
-            // 
-            // bildirimbuton
-            // 
-            bildirimbuton.BackColor = Color.Transparent;
-            bildirimbuton.BackgroundImage = (Image)resources.GetObject("bildirimbuton.BackgroundImage");
-            bildirimbuton.BackgroundImageLayout = ImageLayout.Stretch;
-            bildirimbuton.FlatAppearance.BorderSize = 0;
-            bildirimbuton.FlatStyle = FlatStyle.Flat;
-            bildirimbuton.Location = new Point(455, 31);
-            bildirimbuton.Name = "bildirimbuton";
-            bildirimbuton.Size = new Size(60, 55);
-            bildirimbuton.TabIndex = 10;
-            bildirimbuton.TextImageRelation = TextImageRelation.ImageAboveText;
-            bildirimbuton.UseVisualStyleBackColor = false;
-            bildirimbuton.Click += bildirimbuton_Click;
             // 
             // talepbuton
             // 
-            talepbuton.BackColor = Color.MediumTurquoise;
+            talepbuton.BackColor = Color.FromArgb(50, 52, 77);
+            talepbuton.BorderColor = Color.Transparent;
+            talepbuton.BorderRadius = 30;
+            talepbuton.FlatAppearance.BorderSize = 0;
             talepbuton.FlatStyle = FlatStyle.Flat;
             talepbuton.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            talepbuton.Location = new Point(134, 260);
+            talepbuton.Location = new Point(7, 295);
             talepbuton.Name = "talepbuton";
-            talepbuton.Size = new Size(283, 57);
+            talepbuton.SelectionColor = Color.FromArgb(44, 196, 208);
+            talepbuton.Size = new Size(275, 57);
             talepbuton.TabIndex = 9;
             talepbuton.Text = "Talep Gönder";
             talepbuton.UseVisualStyleBackColor = false;
@@ -60,12 +49,16 @@ namespace RandevuSistem
             // 
             // randevularımbuton
             // 
-            randevularımbuton.BackColor = Color.MediumTurquoise;
+            randevularımbuton.BackColor = Color.FromArgb(50, 52, 77);
+            randevularımbuton.BorderColor = Color.Transparent;
+            randevularımbuton.BorderRadius = 30;
+            randevularımbuton.FlatAppearance.BorderSize = 0;
             randevularımbuton.FlatStyle = FlatStyle.Flat;
             randevularımbuton.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            randevularımbuton.Location = new Point(134, 338);
+            randevularımbuton.Location = new Point(7, 370);
             randevularımbuton.Name = "randevularımbuton";
-            randevularımbuton.Size = new Size(283, 57);
+            randevularımbuton.SelectionColor = Color.FromArgb(44, 196, 208);
+            randevularımbuton.Size = new Size(275, 57);
             randevularımbuton.TabIndex = 8;
             randevularımbuton.Text = "Randevularım";
             randevularımbuton.UseVisualStyleBackColor = false;
@@ -73,75 +66,85 @@ namespace RandevuSistem
             // 
             // randevubuton
             // 
-            randevubuton.BackColor = Color.MediumTurquoise;
+            randevubuton.BackColor = Color.FromArgb(50, 52, 77);
+            randevubuton.BorderColor = Color.Transparent;
+            randevubuton.BorderRadius = 30;
+            randevubuton.FlatAppearance.BorderColor = Color.FromArgb(0, 192, 192);
+            randevubuton.FlatAppearance.BorderSize = 0;
             randevubuton.FlatStyle = FlatStyle.Flat;
             randevubuton.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            randevubuton.Location = new Point(134, 190);
+            randevubuton.Location = new Point(7, 222);
             randevubuton.Name = "randevubuton";
-            randevubuton.Size = new Size(283, 57);
+            randevubuton.SelectionColor = Color.FromArgb(44, 196, 208);
+            randevubuton.Size = new Size(275, 57);
             randevubuton.TabIndex = 7;
             randevubuton.Text = "Randevu Al";
             randevubuton.UseVisualStyleBackColor = false;
             randevubuton.Click += randevubuton_Click;
             // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(50, 52, 77);
+            panel1.Controls.Add(button1);
+            panel1.Controls.Add(talepbuton);
+            panel1.Controls.Add(randevularımbuton);
+            panel1.Controls.Add(randevubuton);
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(287, 730);
+            panel1.TabIndex = 14;
+            panel1.Paint += panel1_Paint;
+            // 
             // button1
             // 
-            button1.BackColor = Color.Transparent;
-            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
-            button1.BackgroundImageLayout = ImageLayout.Stretch;
+            button1.BackColor = Color.White;
+            button1.BackgroundImageLayout = ImageLayout.None;
+            button1.BorderColor = Color.Transparent;
+            button1.BorderRadius = 30;
+            button1.FlatAppearance.BorderColor = Color.FromArgb(255, 255, 128);
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(38, 13);
+            button1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.ImageAlign = ContentAlignment.MiddleLeft;
+            button1.Location = new Point(7, 33);
             button1.Name = "button1";
-            button1.Size = new Size(90, 90);
+            button1.Padding = new Padding(5);
+            button1.RightToLeft = RightToLeft.No;
+            button1.SelectionColor = Color.Red;
+            button1.Size = new Size(275, 88);
             button1.TabIndex = 12;
-            button1.TextImageRelation = TextImageRelation.ImageAboveText;
+            button1.Text = "         Profil";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click_1;
             // 
-            // label1
+            // panel2
             // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.Black;
-            label1.Location = new Point(61, 106);
-            label1.Name = "label1";
-            label1.Size = new Size(47, 20);
-            label1.TabIndex = 13;
-            label1.Text = "Profil";
-            label1.Click += label1_Click;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = Color.Black;
-            label2.Location = new Point(455, 106);
-            label2.Name = "label2";
-            label2.Size = new Size(64, 20);
-            label2.TabIndex = 14;
-            label2.Text = "Bildirim";
-            label2.Click += label2_Click;
+            panel2.BackColor = Color.FromArgb(50, 52, 77);
+            panel2.Location = new Point(287, 222);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(911, 508);
+            panel2.TabIndex = 15;
             // 
             // MainMenu
             // 
             BackColor = Color.White;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(button1);
-            Controls.Add(bildirimbuton);
-            Controls.Add(talepbuton);
-            Controls.Add(randevularımbuton);
-            Controls.Add(randevubuton);
+            Controls.Add(panel2);
+            Controls.Add(panel1);
             Name = "MainMenu";
-            Size = new Size(890, 530);
+            Size = new Size(1200, 730);
             Load += MainMenu_Load;
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
-            PerformLayout();
         }
+
+        private ModernButton talepbuton;
+        private ModernButton randevularımbuton;
+        private Panel panel1;
+        private ModernButton button1;
+        private Panel panel2;
+        private ModernButton randevubuton;
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -162,13 +165,7 @@ namespace RandevuSistem
         {
 
         }
-        private Button bildirimbuton;
-        private Button talepbuton;
-        private Button randevularımbuton;
-        private Button button1;
-        private Label label1;
-        private Label label2;
-        private Button randevubuton;
+
 
         private void bildirimbuton_Click(object sender, EventArgs e)
         {
@@ -181,7 +178,7 @@ namespace RandevuSistem
             this.Controls.Clear();
             RandevuAL randevu = new RandevuAL();
             randevu.Location = new System.Drawing.Point(0, 0); // Konumu belirleyin
-            randevu.Size = new System.Drawing.Size(900, 550); // Boyutu belirleyin
+            randevu.Size = new System.Drawing.Size(1200, 750); // Boyutu belirleyin
             randevu.AutoScroll = true;
             this.randevubuton.Text = "ssda";
             this.AutoScroll = false;
@@ -194,7 +191,7 @@ namespace RandevuSistem
             this.Controls.Clear();
             Randevularım randevu = new Randevularım();
             randevu.Location = new System.Drawing.Point(0, 0); // Konumu belirleyin
-            randevu.Size = new System.Drawing.Size(900, 550); // Boyutu belirleyin
+            randevu.Size = new System.Drawing.Size(1200, 750); // Boyutu belirleyin
             randevu.AutoScroll = true;
             this.AutoScroll = false;
             this.Controls.Add(randevu);
@@ -227,10 +224,15 @@ namespace RandevuSistem
             this.Controls.Clear();
             TalepGonder talep = new TalepGonder();
             talep.Location = new System.Drawing.Point(0, 0); // Konumu belirleyin
-            talep.Size = new System.Drawing.Size(900, 550); // Boyutu belirleyin
+            talep.Size = new System.Drawing.Size(1200, 750); // Boyutu belirleyin
             talep.AutoScroll = true;
             this.AutoScroll = false;
             this.Controls.Add(talep);
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -27,7 +27,7 @@ namespace RandevuSistem
             this.Controls.Clear();
             Form1Main menu = new Form1Main();
             menu.Location = new System.Drawing.Point(0, 0); // Konumu belirleyin
-            menu.Size = new System.Drawing.Size(900, 550); // Boyutu belirleyin
+            menu.Size = new System.Drawing.Size(1200, 750); // Boyutu belirleyin
             this.Controls.Add(menu);
         }
 
@@ -37,8 +37,8 @@ namespace RandevuSistem
             this.Controls.Clear();
             SifreYenileGiris sy = new SifreYenileGiris();
             sy.Location = new System.Drawing.Point(0, 0); // Konumu belirleyin
-            sy.Size = new System.Drawing.Size(900, 500); // Boyutu belirleyin
-            this.Size = new System.Drawing.Size(900, 500);
+            sy.Size = new System.Drawing.Size(1200, 750); // Boyutu belirleyin
+            this.Size = new System.Drawing.Size(1200,750);
             this.AutoScroll = false;
             sy.AutoScroll = false;
             this.Controls.Add(sy);

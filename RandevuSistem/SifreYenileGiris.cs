@@ -22,7 +22,7 @@ namespace RandevuSistem
             this.Controls.Clear();
             SifreDegistirme sd = new SifreDegistirme();
             sd.Location = new System.Drawing.Point(0, 0); // Konumu belirleyin
-            sd.Size = new System.Drawing.Size(900, 550); // Boyutu belirleyin
+            sd.Size = new System.Drawing.Size(1200, 750); // Boyutu belirleyin
             this.Controls.Add(sd);
         }
     }

@@ -39,7 +39,7 @@
             // textBox1
             // 
             textBox1.ForeColor = Color.Black;
-            textBox1.Location = new Point(245, 303);
+            textBox1.Location = new Point(396, 412);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(381, 27);
             textBox1.TabIndex = 0;
@@ -49,7 +49,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.ActiveCaptionText;
-            label1.Location = new Point(245, 268);
+            label1.Location = new Point(396, 377);
             label1.Name = "label1";
             label1.Size = new Size(103, 20);
             label1.TabIndex = 1;
@@ -59,7 +59,7 @@
             // 
             label2.AutoSize = true;
             label2.ForeColor = SystemColors.ActiveCaptionText;
-            label2.Location = new Point(168, 208);
+            label2.Location = new Point(311, 221);
             label2.Name = "label2";
             label2.Size = new Size(551, 60);
             label2.TabIndex = 3;
@@ -73,7 +73,7 @@
             button2.FlatAppearance.BorderSize = 0;
             button2.FlatStyle = FlatStyle.Popup;
             button2.ForeColor = SystemColors.ActiveCaptionText;
-            button2.Location = new Point(352, 375);
+            button2.Location = new Point(503, 484);
             button2.Name = "button2";
             button2.Size = new Size(176, 61);
             button2.TabIndex = 4;
@@ -104,7 +104,7 @@
             Controls.Add(label1);
             Controls.Add(textBox1);
             Name = "SifreDegistirme";
-            Size = new Size(900, 550);
+            Size = new Size(1190, 730);
             ResumeLayout(false);
             PerformLayout();
         }

@@ -45,16 +45,17 @@
             panel1.Controls.Add(textBox1);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(3, 3);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(697, 497);
+            panel1.Size = new Size(1200, 750);
             panel1.TabIndex = 60;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.ForeColor = SystemColors.ActiveCaptionText;
-            label2.Location = new Point(226, 220);
+            label2.Location = new Point(389, 195);
             label2.Name = "label2";
             label2.Size = new Size(414, 40);
             label2.TabIndex = 56;
@@ -76,7 +77,7 @@
             // textBox1
             // 
             textBox1.ForeColor = Color.Black;
-            textBox1.Location = new Point(244, 313);
+            textBox1.Location = new Point(422, 430);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(381, 27);
             textBox1.TabIndex = 54;
@@ -87,7 +88,7 @@
             button2.FlatAppearance.BorderSize = 0;
             button2.FlatStyle = FlatStyle.Popup;
             button2.ForeColor = SystemColors.ActiveCaptionText;
-            button2.Location = new Point(351, 385);
+            button2.Location = new Point(529, 502);
             button2.Name = "button2";
             button2.Size = new Size(176, 61);
             button2.TabIndex = 57;
@@ -99,7 +100,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.ActiveCaptionText;
-            label1.Location = new Point(244, 278);
+            label1.Location = new Point(422, 395);
             label1.Name = "label1";
             label1.Size = new Size(84, 20);
             label1.TabIndex = 55;
@@ -111,7 +112,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(panel1);
             Name = "SifreYenileGiris";
-            Size = new Size(900, 550);
+            Size = new Size(1200, 750);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);

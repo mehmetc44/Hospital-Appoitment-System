@@ -45,6 +45,8 @@
             // panel1
             // 
             panel1.BackColor = Color.PowderBlue;
+            panel1.BackgroundImageLayout = ImageLayout.None;
+            panel1.BorderStyle = BorderStyle.FixedSingle;
             panel1.Controls.Add(button1);
             panel1.Controls.Add(label4);
             panel1.Controls.Add(randevubuton);
@@ -55,7 +57,7 @@
             panel1.Controls.Add(pictureBox1);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(900, 1091);
+            panel1.Size = new Size(1200, 1095);
             panel1.TabIndex = 3;
             panel1.Paint += panel1_Paint;
             // 
@@ -75,6 +77,7 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
             label4.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = Color.Green;
             label4.Location = new Point(430, 443);
@@ -122,6 +125,7 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
             label2.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             label2.Location = new Point(252, 443);
             label2.Name = "label2";
@@ -157,7 +161,7 @@
             AutoScroll = true;
             Controls.Add(panel1);
             Name = "Profil";
-            Size = new Size(879, 529);
+            Size = new Size(1200, 750);
             Load += Profil_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

@@ -61,7 +61,7 @@
             panel1.Controls.Add(pictureBox1);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(900, 1091);
+            panel1.Size = new Size(1160, 1091);
             panel1.TabIndex = 2;
             panel1.Paint += panel1_Paint;
             // 
@@ -182,7 +182,7 @@
             AutoScroll = true;
             Controls.Add(panel1);
             Name = "BilgileriGuncelle";
-            Size = new Size(879, 529);
+            Size = new Size(1180, 730);
             Load += BilgileriGuncelle_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
