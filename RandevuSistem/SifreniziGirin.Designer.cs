@@ -28,142 +28,168 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SifreniziGirin));
-            panel1 = new Panel();
-            textBox3 = new TextBox();
-            label2 = new Label();
-            textBox2 = new TextBox();
-            label3 = new Label();
-            button1 = new Button();
-            textBox1 = new TextBox();
-            button2 = new Button();
             label1 = new Label();
-            panel1.SuspendLayout();
+            textBox1 = new ModernTextBox();
+            label7 = new Label();
+            textBox2 = new ModernTextBox();
+            label8 = new Label();
+            textBox3 = new ModernTextBox();
+            button3 = new ModernElements.ModernButton();
+            button4 = new ModernElements.ModernButton();
             SuspendLayout();
-            // 
-            // panel1
-            // 
-            panel1.Controls.Add(textBox3);
-            panel1.Controls.Add(label2);
-            panel1.Controls.Add(textBox2);
-            panel1.Controls.Add(label3);
-            panel1.Controls.Add(button1);
-            panel1.Controls.Add(textBox1);
-            panel1.Controls.Add(button2);
-            panel1.Controls.Add(label1);
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1197, 750);
-            panel1.TabIndex = 60;
-            panel1.Paint += panel1_Paint;
-            // 
-            // textBox3
-            // 
-            textBox3.ForeColor = Color.Black;
-            textBox3.Location = new Point(240, 301);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(381, 27);
-            textBox3.TabIndex = 61;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = SystemColors.ActiveCaptionText;
-            label2.Location = new Point(240, 265);
-            label2.Name = "label2";
-            label2.Size = new Size(149, 20);
-            label2.TabIndex = 62;
-            label2.Text = "Yeni şifreniz(Tekrar)\n";
-            label2.Click += label2_Click;
-            // 
-            // textBox2
-            // 
-            textBox2.ForeColor = Color.Black;
-            textBox2.Location = new Point(240, 222);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(381, 27);
-            textBox2.TabIndex = 59;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = SystemColors.ActiveCaptionText;
-            label3.Location = new Point(240, 188);
-            label3.Name = "label3";
-            label3.Size = new Size(97, 20);
-            label3.TabIndex = 60;
-            label3.Text = "Yeni şifreniz:\r\n";
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.LightSeaGreen;
-            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
-            button1.BackgroundImageLayout = ImageLayout.Stretch;
-            button1.Location = new Point(16, 26);
-            button1.Name = "button1";
-            button1.Size = new Size(62, 63);
-            button1.TabIndex = 58;
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
-            // 
-            // textBox1
-            // 
-            textBox1.ForeColor = Color.Black;
-            textBox1.Location = new Point(240, 129);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(381, 27);
-            textBox1.TabIndex = 54;
-            textBox1.TextChanged += textBox1_TextChanged;
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.MediumTurquoise;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Popup;
-            button2.ForeColor = SystemColors.ActiveCaptionText;
-            button2.Location = new Point(342, 394);
-            button2.Name = "button2";
-            button2.Size = new Size(176, 61);
-            button2.TabIndex = 57;
-            button2.Text = "Onayla";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = SystemColors.ActiveCaptionText;
-            label1.Location = new Point(240, 94);
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.Silver;
+            label1.Location = new Point(232, 140);
             label1.Name = "label1";
-            label1.Size = new Size(118, 20);
-            label1.TabIndex = 55;
-            label1.Text = "Şu anki şifreniz:\r\n";
+            label1.Size = new Size(141, 28);
+            label1.TabIndex = 67;
+            label1.Text = "Şu anki şifre:";
+            // 
+            // textBox1
+            // 
+            textBox1.BackColor = Color.FromArgb(39, 39, 58);
+            textBox1.BackgroundColor = Color.FromArgb(39, 39, 58);
+            textBox1.BorderColor = Color.White;
+            textBox1.BorderRadius = 15;
+            textBox1.BorderSize = 10;
+            textBox1.BorderStyle = BorderStyle.None;
+            textBox1.Font = new Font("Nirmala UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            textBox1.ForeColor = Color.FromArgb(0, 126, 249);
+            textBox1.Location = new Point(232, 183);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.ReadOnly = true;
+            textBox1.Size = new Size(401, 39);
+            textBox1.TabIndex = 66;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.BackColor = Color.Transparent;
+            label7.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.ForeColor = Color.Silver;
+            label7.Location = new Point(232, 231);
+            label7.Name = "label7";
+            label7.Size = new Size(135, 28);
+            label7.TabIndex = 69;
+            label7.Text = "Yeni şifreniz:";
+            // 
+            // textBox2
+            // 
+            textBox2.BackColor = Color.FromArgb(39, 39, 58);
+            textBox2.BackgroundColor = Color.FromArgb(39, 39, 58);
+            textBox2.BorderColor = Color.White;
+            textBox2.BorderRadius = 15;
+            textBox2.BorderSize = 10;
+            textBox2.BorderStyle = BorderStyle.None;
+            textBox2.Font = new Font("Nirmala UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            textBox2.ForeColor = Color.FromArgb(0, 126, 249);
+            textBox2.Location = new Point(232, 274);
+            textBox2.Multiline = true;
+            textBox2.Name = "textBox2";
+            textBox2.ReadOnly = true;
+            textBox2.Size = new Size(401, 39);
+            textBox2.TabIndex = 68;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.BackColor = Color.Transparent;
+            label8.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.ForeColor = Color.Silver;
+            label8.Location = new Point(232, 316);
+            label8.Name = "label8";
+            label8.Size = new Size(208, 28);
+            label8.TabIndex = 71;
+            label8.Text = "Yeni şifreniz(Tekrar):";
+            // 
+            // textBox3
+            // 
+            textBox3.BackColor = Color.FromArgb(39, 39, 58);
+            textBox3.BackgroundColor = Color.FromArgb(39, 39, 58);
+            textBox3.BorderColor = Color.White;
+            textBox3.BorderRadius = 15;
+            textBox3.BorderSize = 10;
+            textBox3.BorderStyle = BorderStyle.None;
+            textBox3.Font = new Font("Nirmala UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            textBox3.ForeColor = Color.FromArgb(0, 126, 249);
+            textBox3.Location = new Point(232, 359);
+            textBox3.Multiline = true;
+            textBox3.Name = "textBox3";
+            textBox3.ReadOnly = true;
+            textBox3.Size = new Size(401, 39);
+            textBox3.TabIndex = 70;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.SeaGreen;
+            button3.BorderColor = Color.Transparent;
+            button3.BorderRadius = 20;
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.ForeColor = Color.White;
+            button3.Location = new Point(212, 455);
+            button3.Name = "button3";
+            button3.SelectionColor = Color.Red;
+            button3.Size = new Size(183, 57);
+            button3.TabIndex = 74;
+            button3.Text = "Güncelle";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
+            // 
+            // button4
+            // 
+            button4.BackColor = Color.Red;
+            button4.BorderColor = Color.Transparent;
+            button4.BorderRadius = 20;
+            button4.FlatAppearance.BorderSize = 0;
+            button4.FlatStyle = FlatStyle.Flat;
+            button4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button4.ForeColor = Color.White;
+            button4.Location = new Point(501, 455);
+            button4.Name = "button4";
+            button4.SelectionColor = Color.Red;
+            button4.Size = new Size(183, 57);
+            button4.TabIndex = 73;
+            button4.Text = "İptal";
+            button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // SifreniziGirin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(panel1);
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            BackColor = Color.FromArgb(50, 52, 77);
+            Controls.Add(button3);
+            Controls.Add(button4);
+            Controls.Add(label8);
+            Controls.Add(textBox3);
+            Controls.Add(label7);
+            Controls.Add(textBox2);
+            Controls.Add(label1);
+            Controls.Add(textBox1);
             Name = "SifreniziGirin";
-            Size = new Size(1200, 750);
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            Size = new Size(910, 640);
+            Load += SifreniziGirin_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-
-        private Panel panel1;
-        private Button button1;
-        private TextBox textBox1;
-        private Button button2;
+        private ModernTextBox textBox3;
         private Label label1;
-        private TextBox textBox2;
-        private Label label3;
-        private TextBox textBox3;
-        private Label label2;
+        private ModernTextBox textBox1;
+        private Label label7;
+        private ModernTextBox textBox2;
+        private Label label8;
+        private ModernElements.ModernButton button3;
+        private ModernElements.ModernButton button4;
     }
 }

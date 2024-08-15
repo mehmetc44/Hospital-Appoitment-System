@@ -16,7 +16,11 @@ namespace RandevuSistem
         public SifreniziGirin()
         {
             InitializeComponent();
+            control = this.Parent;
+            
         }
+        private Control control;
+        private Size profilSize;
         public class User
         {
             public User(string tcNumara, string oldPassword, string newPassword)
@@ -52,6 +56,37 @@ namespace RandevuSistem
 
         private async void button2_Click(object sender, EventArgs e)
         {
+
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void SifreniziGirin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private async void button3_Click(object sender, EventArgs e)
+        {
             if (textBox2.Text == textBox3.Text)
             {
                 if ((textBox1.Text == null) || (textBox2.Text == null) || (textBox3.Text == null))
@@ -67,31 +102,22 @@ namespace RandevuSistem
             {
                 MessageBox.Show("Girdiğiniz şifreler uyuşmuyor.");
             }
-
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
-            this.Controls.Clear();
+            control.Controls.Clear();
             Profil profil = new Profil();
-            profil.Location = new System.Drawing.Point(0, 0); // Konumu belirleyin
-            profil.Size = new System.Drawing.Size(1180, 730); // Boyutu belirleyin
-            profil.AutoScroll = true;
-            this.AutoScroll = false;
-            this.Controls.Add(profil);
+            profil.Size = profilSize;
+            control.Controls[0].Controls.Add(profil);
+
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
         }

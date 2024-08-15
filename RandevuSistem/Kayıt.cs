@@ -41,12 +41,13 @@ namespace RandevuSistem
             this.BorderStyle = BorderStyle.None;
             this.DoubleBuffered = true;
             this.Resize += Kayıt_Resize;
+            this.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom | AnchorStyles.Top;
             OriginalSize = this.Size;
             recBut1 = new Rectangle(button1.Location, button1.Size);
             recBut2 = new Rectangle(button2.Location, button2.Size);
             recTxt1 = new Rectangle(textBox1.Location, textBox1.Size);
             recTxt2 = new Rectangle(textBox2.Location, textBox2.Size);
-            recTxt3= new Rectangle(textBox3.Location, textBox3.Size);
+            recTxt3 = new Rectangle(textBox3.Location, textBox3.Size);
             recTxt4 = new Rectangle(textBox4.Location, textBox4.Size);
             recTxt5 = new Rectangle(textBox5.Location, textBox5.Size);
             recCombo1 = new Rectangle(comboBox1.Location, comboBox1.Size);
@@ -55,7 +56,7 @@ namespace RandevuSistem
             recLbl1 = new Rectangle(label1.Location, label1.Size);
             recLbl2 = new Rectangle(label2.Location, label2.Size);
             recLbl3 = new Rectangle(label3.Location, label3.Size);
-            recLbl4 = new Rectangle(label4.Location, label4.Size); 
+            recLbl4 = new Rectangle(label4.Location, label4.Size);
             recLbl5 = new Rectangle(label5.Location, label5.Size);
             recLbl6 = new Rectangle(label6.Location, label6.Size);
             recLbl8 = new Rectangle(label8.Location, label8.Size);
@@ -63,15 +64,15 @@ namespace RandevuSistem
         }
         private void Kayıt_Resize(object sender, EventArgs e)
         {
-            resize_Control(button1,recBut1);
-            resize_Control(button2,recBut2);
-            resize_Control(textBox1,recTxt1);
-            resize_Control(textBox2,recTxt2);
-            resize_Control(textBox3,recTxt3);
-            resize_Control(textBox4,recTxt4);
-            resize_Control(textBox5,recTxt5);
-            resize_Control(comboBox1,recCombo1);
-            resize_Control(comboBox2,recCombo2);
+            resize_Control(button1, recBut1);
+            resize_Control(button2, recBut2);
+            resize_Control(textBox1, recTxt1);
+            resize_Control(textBox2, recTxt2);
+            resize_Control(textBox3, recTxt3);
+            resize_Control(textBox4, recTxt4);
+            resize_Control(textBox5, recTxt5);
+            resize_Control(comboBox1, recCombo1);
+            resize_Control(comboBox2, recCombo2);
             resize_Control(dateTimePicker1, recDate);
             resize_Control_nosize(label1, recLbl1);
             resize_Control_nosize(label2, recLbl2);
@@ -260,6 +261,30 @@ namespace RandevuSistem
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void modernButton1_Click(object sender, EventArgs e)
+        {
+            this.Controls.Clear();
+            Form1Main menu = new Form1Main();
+            menu.Location = new System.Drawing.Point(0, 0); // Konumu belirleyin
+            menu.Size = this.Parent.Size;// Boyutu belirleyin
+            this.Controls.Add(menu);
+        }
+
+        private void modernButton1_MouseEnter(object sender, EventArgs e)
+        {
+            modernButton1.BackColor = Color.FromArgb(148, 148, 137);
+        }
+
+        private void modernButton1_MouseLeave(object sender, EventArgs e)
+        {
+            modernButton1.BackColor = Color.Transparent;
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+   
         }
     }
 }

@@ -3,27 +3,68 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
-internal class ModernPictureBox : PictureBox
-{
-    public int BorderRadius { get; set; } = 20; // Varsayılan köşe yuvarlama
-
-    protected override void OnPaint(PaintEventArgs e)
+public class ModernPictureBox : PictureBox
+{ 
+    public  ModernPictureBox()
     {
-        base.OnPaint(e);
-        e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
+        this.DoubleBuffered = true;
+    }
 
-        // PictureBox'ın dikdörtgenini al
-        Rectangle pictureBoxRect = new Rectangle(0, 0, this.Width, this.Height);
+    private int borderRadius = 20;  // Köşe yarıçapı
+    private int borderWidth = 2;    // Kenarlık kalınlığı
+    private Color borderColor = Color.Transparent; // Kenarlık rengi
+
+    public int BorderRadius
+    {
+        get { return borderRadius; }
+        set { borderRadius = value; this.Invalidate(); }
+    }
+
+    public int BorderWidth
+    {
+        get { return borderWidth; }
+        set { borderWidth = value; this.Invalidate(); }
+    }
+
+    public Color BorderColor
+    {
+        get { return borderColor; }
+        set { borderColor = value; this.Invalidate(); }
+    }
+
+    protected override void OnPaint(PaintEventArgs pe)
+    {
+        Graphics graphics = pe.Graphics;
+        graphics.SmoothingMode = SmoothingMode.AntiAlias;
+
+        Rectangle rect = new Rectangle(0, 0, this.Width, this.Height);
+
+        // Yuvarlatılmış köşeler için bir GraphicsPath oluştur
+        GraphicsPath path = GetRoundedRectanglePath(rect, borderRadius);
+        graphics.SetClip(path);
+
+        // Resmi çiz
+        base.OnPaint(pe);
+
+        // Kenarlığı çiz
+        using (Pen pen = new Pen(borderColor, borderWidth))
+        {
+            graphics.DrawPath(pen, path);
+        }
+    }
+
+    private GraphicsPath GetRoundedRectanglePath(Rectangle rect, int radius)
+    {
+        int diameter = radius * 2;
         GraphicsPath path = new GraphicsPath();
 
-        int radius = BorderRadius;
-        path.AddArc(pictureBoxRect.X, pictureBoxRect.Y, radius, radius, 180, 90); // Sol üst köşe
-        path.AddArc(pictureBoxRect.X + pictureBoxRect.Width - radius, pictureBoxRect.Y, radius, radius, 270, 90); // Sağ üst köşe
-        path.AddArc(pictureBoxRect.X + pictureBoxRect.Width - radius, pictureBoxRect.Y + pictureBoxRect.Height - radius, radius, radius, 0, 90); // Sağ alt köşe
-        path.AddArc(pictureBoxRect.X, pictureBoxRect.Y + pictureBoxRect.Height - radius, radius, radius, 90, 90); // Sol alt köşe
-        path.CloseAllFigures();
+        path.StartFigure();
+        path.AddArc(rect.Left, rect.Top, diameter, diameter, 180, 90);
+        path.AddArc(rect.Right - diameter, rect.Top, diameter, diameter, 270, 90);
+        path.AddArc(rect.Right - diameter, rect.Bottom - diameter, diameter, diameter, 0, 90);
+        path.AddArc(rect.Left, rect.Bottom - diameter, diameter, diameter, 90, 90);
+        path.CloseFigure();
 
-        // PictureBox'ın bölgesini ayarla
-        this.Region = new Region(path);
+        return path;
     }
 }

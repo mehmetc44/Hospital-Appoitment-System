@@ -134,5 +134,23 @@ namespace RandevuSistem.Classes.Operations
             }
             return kangrubu;
         }
+        public static string GetKanGurubuById(int kangrubuId)
+        {
+            string kangurup;
+            switch (kangrubuId)
+            {
+                case 0: kangurup = "-"; break;
+                case 1: kangurup = "0-"; break;
+                case 2: kangurup = "0+"; break;
+                case 3: kangurup = "A-"; break;
+                case 4: kangurup = "A+"; break;
+                case 5: kangurup = "B-"; break;
+                case 6: kangurup = "B+"; break;
+                case 7: kangurup = "AB-"; break;
+                case 8: kangurup = "AB+"; break;
+                default: kangurup = "-"; break;
+            }
+            return kangurup;
+        }
     }
 }

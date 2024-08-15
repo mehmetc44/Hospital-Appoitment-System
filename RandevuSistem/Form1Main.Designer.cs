@@ -37,10 +37,8 @@ namespace RandevuSistem
             textBox2 = new ModernTextBox();
             panel1 = new ModernPanel();
             label2 = new Label();
-            panel2 = new Panel();
             pictureBox1 = new PictureBox();
             panel1.SuspendLayout();
-            panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -52,8 +50,9 @@ namespace RandevuSistem
             linkLabel2.BackColor = Color.Transparent;
             linkLabel2.DisabledLinkColor = Color.Transparent;
             linkLabel2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            linkLabel2.LinkColor = Color.Black;
-            linkLabel2.Location = new Point(50, 312);
+            linkLabel2.ForeColor = SystemColors.Control;
+            linkLabel2.LinkColor = Color.Gainsboro;
+            linkLabel2.Location = new Point(53, 503);
             linkLabel2.Name = "linkLabel2";
             linkLabel2.Size = new Size(64, 20);
             linkLabel2.TabIndex = 10;
@@ -63,15 +62,15 @@ namespace RandevuSistem
             // 
             // linkLabel1
             // 
-            linkLabel1.ActiveLinkColor = Color.Transparent;
+            linkLabel1.ActiveLinkColor = Color.LightGray;
             linkLabel1.Anchor = AnchorStyles.None;
             linkLabel1.AutoSize = true;
             linkLabel1.BackColor = Color.Transparent;
             linkLabel1.DisabledLinkColor = Color.Transparent;
             linkLabel1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            linkLabel1.ForeColor = Color.Transparent;
-            linkLabel1.LinkColor = Color.Black;
-            linkLabel1.Location = new Point(360, 312);
+            linkLabel1.ForeColor = Color.Gray;
+            linkLabel1.LinkColor = Color.Gainsboro;
+            linkLabel1.Location = new Point(363, 503);
             linkLabel1.Name = "linkLabel1";
             linkLabel1.Size = new Size(125, 20);
             linkLabel1.TabIndex = 9;
@@ -88,7 +87,7 @@ namespace RandevuSistem
             textBox1.BorderRadius = 30;
             textBox1.BorderSize = 2;
             textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Location = new Point(81, 95);
+            textBox1.Location = new Point(84, 286);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.PlaceholderText = "TC Kimlik No";
@@ -100,13 +99,13 @@ namespace RandevuSistem
             // 
             button1.Anchor = AnchorStyles.None;
             button1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            button1.BackColor = Color.MediumTurquoise;
+            button1.BackColor = Color.RoyalBlue;
             button1.BorderColor = Color.Transparent;
             button1.BorderRadius = 20;
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
             button1.ForeColor = SystemColors.ActiveCaptionText;
-            button1.Location = new Point(178, 236);
+            button1.Location = new Point(181, 427);
             button1.Margin = new Padding(0);
             button1.Name = "button1";
             button1.SelectionColor = Color.Red;
@@ -125,7 +124,7 @@ namespace RandevuSistem
             textBox2.BorderRadius = 15;
             textBox2.BorderSize = 2;
             textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Location = new Point(81, 148);
+            textBox2.Location = new Point(84, 339);
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
             textBox2.PlaceholderText = "Şifre";
@@ -136,76 +135,60 @@ namespace RandevuSistem
             // 
             // panel1
             // 
-            panel1.Anchor = AnchorStyles.None;
             panel1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            panel1.BackColor = SystemColors.ControlLight;
-            panel1.BorderRadius = 20;
+            panel1.BackColor = Color.FromArgb(50, 52, 77);
+            panel1.BorderRadius = 30;
             panel1.Controls.Add(label2);
             panel1.Controls.Add(textBox1);
             panel1.Controls.Add(textBox2);
             panel1.Controls.Add(linkLabel2);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(linkLabel1);
-            panel1.Location = new Point(350, 282);
+            panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(500, 369);
+            panel1.Size = new Size(507, 750);
             panel1.TabIndex = 12;
             panel1.Paint += panel1_Paint;
             // 
             // label2
             // 
-            //label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label2.BackColor = SystemColors.ControlLight;
-            label2.BorderStyle = BorderStyle.None;
-            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(71, 53);
+            label2.Anchor = AnchorStyles.None;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Nirmala UI", 25.8000011F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = Color.AliceBlue;
+            label2.Location = new Point(123, 54);
             label2.Name = "label2";
-            label2.Size = new Size(60, 28);
+            label2.Size = new Size(246, 106);
             label2.TabIndex = 11;
-            label2.Text = "Giriş:";
+            label2.Text = "MedikApp";
             label2.TextAlign = ContentAlignment.MiddleCenter;
             label2.Click += label2_Click;
             // 
-            // panel2
-            // 
-            panel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            panel2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            panel2.BackColor = Color.White;
-            panel2.BackgroundImageLayout = ImageLayout.Stretch;
-            panel2.Controls.Add(pictureBox1);
-            panel2.Location = new Point(275, 83);
-            panel2.Margin = new Padding(0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(650, 156);
-            panel2.TabIndex = 13;
-            panel2.Paint += panel2_Paint;
-            // 
             // pictureBox1
             // 
-            pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Location = new Point(503, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(650, 156);
+            pictureBox1.Size = new Size(694, 750);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 0;
+            pictureBox1.TabIndex = 13;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click_2;
             // 
             // Form1Main
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackColor = Color.FromArgb(50, 52, 77);
             BackgroundImageLayout = ImageLayout.Stretch;
-            Controls.Add(panel2);
             Controls.Add(panel1);
+            Controls.Add(pictureBox1);
             Name = "Form1Main";
             Size = new Size(1200, 750);
             Load += Form1Main_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
@@ -217,7 +200,6 @@ namespace RandevuSistem
         private ModernButton button1;
         private ModernTextBox textBox2;
         private ModernPanel panel1;
-        private Panel panel2;
         private Label label2;
         private PictureBox pictureBox1;
     }

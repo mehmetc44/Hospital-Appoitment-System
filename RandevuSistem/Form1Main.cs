@@ -30,12 +30,15 @@ namespace RandevuSistem
         private Rectangle recPanel2;
         private Rectangle recLbl1;
         private Rectangle recLbl2;
+        private Rectangle recPic1;
         public Form1Main()
         {
             InitializeComponent();
             this.BorderStyle = BorderStyle.None;
+
             this.DoubleBuffered = true;
             this.Resize += Form1Main_Resize;
+            this.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom | AnchorStyles.Top;
             formOriginalSize = this.Size;
             panelOriginal = panel1.Size;
             recBut1 = new Rectangle(button1.Location, button1.Size);
@@ -44,14 +47,15 @@ namespace RandevuSistem
             recLink1 = new Rectangle(linkLabel1.Location, linkLabel1.Size);
             recLink2 = new Rectangle(linkLabel2.Location, linkLabel2.Size);
             recPanel1 = new Rectangle(panel1.Location, panel1.Size);
-            recPanel2 = new Rectangle(panel2.Location, panel2.Size);
             recLbl2 = new Rectangle(label2.Location, label2.Size);
+            recPic1 = new Rectangle(pictureBox1.Location, pictureBox1.Size);
         }
 
 
 
         private void Form1Main_Resize(object sender, EventArgs e)
         {
+            this.Invalidate();
             resize_Control(button1, recBut1);
             resize_Control(textBox1, recTxt1);
             resize_Control(textBox2, recTxt2);
@@ -59,7 +63,8 @@ namespace RandevuSistem
             resize_Control(linkLabel2, recLink2);
             resize_Control_nosize(label2, recLbl2);
             resize_Panel(panel1, recPanel1);
-            resize_Panel(panel2, recPanel2);
+            this.pictureBox1.Size= new Size((this.Width)-(panel1.Size.Width),this.Size.Height);
+            this.pictureBox1.Location= new Point(panel1.Size.Width,0);
         }
         private void resize_Panel(Control c, Rectangle r)
         {
@@ -67,11 +72,8 @@ namespace RandevuSistem
             float yRatio = (float)(this.Height) / (float)(formOriginalSize.Height);
             int newX = (int)(r.X * xRatio);
             int newY = (int)(r.Y * yRatio);
-
-            int newWidth = (int)(r.Width * xRatio);
             int newHeight = (int)(r.Height * yRatio);
-
-            c.Location = new Point(newX, newY);
+            int newWidth = (int)(r.Width * xRatio);
             c.Size = new Size(newWidth, newHeight);
 
         }
@@ -150,7 +152,7 @@ namespace RandevuSistem
                                 this.Controls.Clear();
                                 MainMenu menu = new MainMenu();
                                 menu.Location = new System.Drawing.Point(0, 0); // Konumu belirleyin
-                                menu.Size = new System.Drawing.Size(1200, 750); // Boyutu belirleyin
+                                menu.Size = this.Parent.Size; // Boyutu belirleyin
                                 this.Controls.Add(menu);
 
                             }
@@ -186,6 +188,7 @@ namespace RandevuSistem
 
         private void Form1Main_Load(object sender, EventArgs e)
         {
+            this.Size = this.Parent.Size;
 
         }
 
@@ -195,7 +198,7 @@ namespace RandevuSistem
             this.Controls.Clear();
             SifreDegistirme sd = new SifreDegistirme();
             sd.Location = new System.Drawing.Point(0, 0); // Konumu belirleyin
-            sd.Size = new System.Drawing.Size(1200, 750); // Boyutu belirleyin
+            sd.Size = this.Parent.Size; // Boyutu belirleyin
             this.Controls.Add(sd);
         }
 
@@ -209,7 +212,7 @@ namespace RandevuSistem
             this.Controls.Clear();
             Kayıt kayıt = new Kayıt();
             kayıt.Location = new System.Drawing.Point(0, 0);
-            kayıt.Size = this.Size;
+            kayıt.Size = this.Parent.Size;
             kayıt.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             this.Controls.Add(kayıt);
         }
@@ -235,6 +238,16 @@ namespace RandevuSistem
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click_2(object sender, EventArgs e)
         {
 
         }

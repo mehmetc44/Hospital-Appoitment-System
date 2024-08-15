@@ -47,6 +47,7 @@
             label7 = new Label();
             label2 = new Label();
             button1 = new Button();
+            modernButton1 = new ModernElements.ModernButton();
             SuspendLayout();
             // 
             // label1
@@ -250,6 +251,29 @@
             button1.TabIndex = 61;
             button1.Text = "Kaydet";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click_1;
+            // 
+            // modernButton1
+            // 
+            modernButton1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            modernButton1.BackColor = Color.Transparent;
+            modernButton1.BackgroundImage = (Image)resources.GetObject("modernButton1.BackgroundImage");
+            modernButton1.BackgroundImageLayout = ImageLayout.Stretch;
+            modernButton1.BorderColor = Color.Transparent;
+            modernButton1.BorderRadius = 30;
+            modernButton1.FlatAppearance.BorderColor = Color.Yellow;
+            modernButton1.FlatAppearance.BorderSize = 0;
+            modernButton1.FlatStyle = FlatStyle.Flat;
+            modernButton1.Location = new Point(40, 25);
+            modernButton1.Margin = new Padding(0);
+            modernButton1.Name = "modernButton1";
+            modernButton1.SelectionColor = Color.Red;
+            modernButton1.Size = new Size(42, 48);
+            modernButton1.TabIndex = 79;
+            modernButton1.UseVisualStyleBackColor = false;
+            modernButton1.Click += modernButton1_Click;
+            modernButton1.MouseEnter += modernButton1_MouseEnter;
+            modernButton1.MouseLeave += modernButton1_MouseLeave;
             // 
             // Kayıt
             // 
@@ -258,6 +282,7 @@
             BackColor = Color.LightSeaGreen;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
+            Controls.Add(modernButton1);
             Controls.Add(label1);
             Controls.Add(button2);
             Controls.Add(comboBox2);
@@ -303,5 +328,6 @@
         private Label label7;
         private Label label2;
         private Button button1;
+        private ModernElements.ModernButton modernButton1;
     }
 }
