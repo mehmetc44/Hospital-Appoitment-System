@@ -99,13 +99,6 @@ namespace RandevuSistem
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Controls.Clear();
-            Profil profil = new Profil();
-            profil.Location = new System.Drawing.Point(0, 0); // Konumu belirleyin
-            profil.Size = new System.Drawing.Size(1200, 750); // Boyutu belirleyin
-            profil.AutoScroll = true;
-            this.AutoScroll = false;
-            this.Controls.Add(profil);
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)

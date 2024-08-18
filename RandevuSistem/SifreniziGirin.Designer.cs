@@ -30,9 +30,9 @@
         {
             label1 = new Label();
             textBox1 = new ModernTextBox();
-            label7 = new Label();
+            label2 = new Label();
             textBox2 = new ModernTextBox();
-            label8 = new Label();
+            label3 = new Label();
             textBox3 = new ModernTextBox();
             button3 = new ModernElements.ModernButton();
             button4 = new ModernElements.ModernButton();
@@ -66,18 +66,19 @@
             textBox1.ReadOnly = true;
             textBox1.Size = new Size(401, 39);
             textBox1.TabIndex = 66;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
-            // label7
+            // label2
             // 
-            label7.AutoSize = true;
-            label7.BackColor = Color.Transparent;
-            label7.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.ForeColor = Color.Silver;
-            label7.Location = new Point(232, 231);
-            label7.Name = "label7";
-            label7.Size = new Size(135, 28);
-            label7.TabIndex = 69;
-            label7.Text = "Yeni şifreniz:";
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = Color.Silver;
+            label2.Location = new Point(232, 231);
+            label2.Name = "label2";
+            label2.Size = new Size(135, 28);
+            label2.TabIndex = 69;
+            label2.Text = "Yeni şifreniz:";
             // 
             // textBox2
             // 
@@ -96,17 +97,17 @@
             textBox2.Size = new Size(401, 39);
             textBox2.TabIndex = 68;
             // 
-            // label8
+            // label3
             // 
-            label8.AutoSize = true;
-            label8.BackColor = Color.Transparent;
-            label8.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.ForeColor = Color.Silver;
-            label8.Location = new Point(232, 316);
-            label8.Name = "label8";
-            label8.Size = new Size(208, 28);
-            label8.TabIndex = 71;
-            label8.Text = "Yeni şifreniz(Tekrar):";
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = Color.Silver;
+            label3.Location = new Point(232, 316);
+            label3.Name = "label3";
+            label3.Size = new Size(208, 28);
+            label3.TabIndex = 71;
+            label3.Text = "Yeni şifreniz(Tekrar):";
             // 
             // textBox3
             // 
@@ -166,18 +167,20 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            BackColor = Color.FromArgb(50, 52, 77);
+            BackColor = Color.FromArgb(46, 51, 73);
+            BorderStyle = BorderStyle.FixedSingle;
             Controls.Add(button3);
             Controls.Add(button4);
-            Controls.Add(label8);
+            Controls.Add(label3);
             Controls.Add(textBox3);
-            Controls.Add(label7);
+            Controls.Add(label2);
             Controls.Add(textBox2);
             Controls.Add(label1);
             Controls.Add(textBox1);
             Name = "SifreniziGirin";
-            Size = new Size(910, 640);
+            Size = new Size(930, 640);
             Load += SifreniziGirin_Load;
+            Resize += SifreniziGirin_Resize;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -186,9 +189,9 @@
         private ModernTextBox textBox3;
         private Label label1;
         private ModernTextBox textBox1;
-        private Label label7;
+        private Label label2;
         private ModernTextBox textBox2;
-        private Label label8;
+        private Label label3;
         private ModernElements.ModernButton button3;
         private ModernElements.ModernButton button4;
     }

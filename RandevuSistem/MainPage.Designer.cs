@@ -42,16 +42,22 @@ namespace RandevuSistem
             label6 = new Label();
             panel4 = new ModernPanel();
             label1 = new Label();
-            label9 = new Label();
+            modernPanel3 = new ModernPanel();
+            button1 = new ModernButton();
+            label14 = new Label();
+            label15 = new Label();
+            linkLabel1 = new LinkLabel();
+            modernPanel1 = new ModernPanel();
+            label10 = new Label();
+            monthCalendar1 = new ModernMonthCalendar();
             panel5 = new Panel();
-            panel6 = new Panel();
-            label8 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
             panel4.SuspendLayout();
+            modernPanel3.SuspendLayout();
+            modernPanel1.SuspendLayout();
             panel5.SuspendLayout();
-            panel6.SuspendLayout();
             SuspendLayout();
             // 
             // Yas
@@ -60,7 +66,7 @@ namespace RandevuSistem
             Yas.BackColor = Color.Transparent;
             Yas.Font = new Font("Nirmala UI", 25.8000011F, FontStyle.Bold, GraphicsUnit.Point);
             Yas.ForeColor = Color.FromArgb(0, 126, 249);
-            Yas.Location = new Point(65, 22);
+            Yas.Location = new Point(56, 13);
             Yas.Name = "Yas";
             Yas.Size = new Size(75, 60);
             Yas.TabIndex = 0;
@@ -71,7 +77,7 @@ namespace RandevuSistem
             Yastxt.AutoSize = true;
             Yastxt.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             Yastxt.ForeColor = Color.Azure;
-            Yastxt.Location = new Point(81, 82);
+            Yastxt.Location = new Point(70, 73);
             Yastxt.Name = "Yastxt";
             Yastxt.Size = new Size(42, 28);
             Yastxt.TabIndex = 1;
@@ -80,13 +86,13 @@ namespace RandevuSistem
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(39, 39, 58);
+            panel1.BackColor = Color.FromArgb(18, 48, 70);
             panel1.BorderRadius = 30;
             panel1.Controls.Add(Yastxt);
             panel1.Controls.Add(Yas);
-            panel1.Location = new Point(43, 23);
+            panel1.Location = new Point(36, 224);
             panel1.Name = "panel1";
-            panel1.Size = new Size(198, 124);
+            panel1.Size = new Size(184, 120);
             panel1.TabIndex = 1;
             panel1.Paint += panel1_Paint;
             // 
@@ -96,7 +102,7 @@ namespace RandevuSistem
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Nirmala UI", 25.8000011F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.FromArgb(0, 126, 249);
-            label3.Location = new Point(50, 22);
+            label3.Location = new Point(50, 13);
             label3.Name = "label3";
             label3.Size = new Size(100, 60);
             label3.TabIndex = 0;
@@ -107,7 +113,7 @@ namespace RandevuSistem
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.Azure;
-            label2.Location = new Point(75, 82);
+            label2.Location = new Point(72, 69);
             label2.Name = "label2";
             label2.Size = new Size(48, 28);
             label2.TabIndex = 1;
@@ -115,13 +121,13 @@ namespace RandevuSistem
             // 
             // panel2
             // 
-            panel2.BackColor = Color.FromArgb(39, 39, 58);
+            panel2.BackColor = Color.FromArgb(18, 48, 70);
             panel2.BorderRadius = 30;
             panel2.Controls.Add(label2);
             panel2.Controls.Add(label3);
-            panel2.Location = new Point(451, 23);
+            panel2.Location = new Point(226, 350);
             panel2.Name = "panel2";
-            panel2.Size = new Size(198, 124);
+            panel2.Size = new Size(184, 120);
             panel2.TabIndex = 3;
             // 
             // label5
@@ -130,7 +136,7 @@ namespace RandevuSistem
             label5.BackColor = Color.Transparent;
             label5.Font = new Font("Nirmala UI", 25.8000011F, FontStyle.Bold, GraphicsUnit.Point);
             label5.ForeColor = Color.FromArgb(0, 126, 249);
-            label5.Location = new Point(65, 22);
+            label5.Location = new Point(56, 13);
             label5.Name = "label5";
             label5.Size = new Size(75, 60);
             label5.TabIndex = 0;
@@ -141,7 +147,7 @@ namespace RandevuSistem
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = Color.Azure;
-            label4.Location = new Point(75, 82);
+            label4.Location = new Point(65, 73);
             label4.Name = "label4";
             label4.Size = new Size(49, 28);
             label4.TabIndex = 1;
@@ -149,13 +155,13 @@ namespace RandevuSistem
             // 
             // panel3
             // 
-            panel3.BackColor = Color.FromArgb(39, 39, 58);
+            panel3.BackColor = Color.FromArgb(18, 48, 70);
             panel3.BorderRadius = 30;
             panel3.Controls.Add(label4);
             panel3.Controls.Add(label5);
-            panel3.Location = new Point(247, 23);
+            panel3.Location = new Point(36, 350);
             panel3.Name = "panel3";
-            panel3.Size = new Size(198, 124);
+            panel3.Size = new Size(184, 120);
             panel3.TabIndex = 3;
             // 
             // label7
@@ -164,32 +170,32 @@ namespace RandevuSistem
             label7.BackColor = Color.Transparent;
             label7.Font = new Font("Nirmala UI", 25.8000011F, FontStyle.Bold, GraphicsUnit.Point);
             label7.ForeColor = Color.FromArgb(0, 126, 249);
-            label7.Location = new Point(50, 22);
+            label7.Location = new Point(56, 13);
             label7.Name = "label7";
-            label7.Size = new Size(112, 60);
+            label7.Size = new Size(87, 60);
             label7.TabIndex = 0;
-            label7.Text = "20.5";
+            label7.Text = "A+";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 7.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             label6.ForeColor = Color.Azure;
-            label6.Location = new Point(65, 81);
+            label6.Location = new Point(48, 75);
             label6.Name = "label6";
-            label6.Size = new Size(76, 34);
+            label6.Size = new Size(94, 23);
             label6.TabIndex = 1;
-            label6.Text = "Vücut-Kitle\r\n  endeksi";
+            label6.Text = "Kan grubu";
             // 
             // panel4
             // 
-            panel4.BackColor = Color.FromArgb(39, 39, 58);
+            panel4.BackColor = Color.FromArgb(18, 48, 70);
             panel4.BorderRadius = 30;
             panel4.Controls.Add(label6);
             panel4.Controls.Add(label7);
-            panel4.Location = new Point(655, 23);
+            panel4.Location = new Point(226, 224);
             panel4.Name = "panel4";
-            panel4.Size = new Size(198, 124);
+            panel4.Size = new Size(184, 120);
             panel4.TabIndex = 3;
             // 
             // label1
@@ -203,59 +209,132 @@ namespace RandevuSistem
             label1.TabIndex = 4;
             label1.Text = "Kişisel Bilgiler";
             // 
-            // label9
+            // modernPanel3
             // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label9.ForeColor = SystemColors.AppWorkspace;
-            label9.Location = new Point(100, 30);
-            label9.Name = "label9";
-            label9.Size = new Size(122, 28);
-            label9.TabIndex = 6;
-            label9.Text = "Aile Hekimi";
-            label9.Click += label9_Click;
+            modernPanel3.BackColor = Color.FromArgb(39, 39, 58);
+            modernPanel3.BorderRadius = 50;
+            modernPanel3.Controls.Add(button1);
+            modernPanel3.Controls.Add(label14);
+            modernPanel3.Controls.Add(label15);
+            modernPanel3.Location = new Point(444, 126);
+            modernPanel3.Name = "modernPanel3";
+            modernPanel3.Size = new Size(419, 126);
+            modernPanel3.TabIndex = 3;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.SeaGreen;
+            button1.BorderColor = Color.Transparent;
+            button1.BorderRadius = 30;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.ForeColor = SystemColors.HighlightText;
+            button1.Location = new Point(222, 45);
+            button1.Name = "button1";
+            button1.SelectionColor = Color.Red;
+            button1.Size = new Size(125, 40);
+            button1.TabIndex = 97;
+            button1.Text = "Hesapla";
+            button1.UseVisualStyleBackColor = false;
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label14.ForeColor = Color.Azure;
+            label14.Location = new Point(56, 67);
+            label14.Name = "label14";
+            label14.Size = new Size(89, 40);
+            label14.TabIndex = 1;
+            label14.Text = "Vücut-kitle \r\nendeksi";
+            label14.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.BackColor = Color.Transparent;
+            label15.Font = new Font("Nirmala UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label15.ForeColor = Color.FromArgb(0, 126, 249);
+            label15.Location = new Point(56, 17);
+            label15.Name = "label15";
+            label15.Size = new Size(95, 50);
+            label15.TabIndex = 0;
+            label15.Text = "35.1";
+            // 
+            // linkLabel1
+            // 
+            linkLabel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            linkLabel1.AutoSize = true;
+            linkLabel1.BackColor = Color.FromArgb(48, 78, 100);
+            linkLabel1.LinkArea = new LinkArea(0, 18);
+            linkLabel1.LinkBehavior = LinkBehavior.HoverUnderline;
+            linkLabel1.LinkColor = Color.Turquoise;
+            linkLabel1.Location = new Point(158, 498);
+            linkLabel1.Name = "linkLabel1";
+            linkLabel1.Size = new Size(121, 20);
+            linkLabel1.TabIndex = 9;
+            linkLabel1.TabStop = true;
+            linkLabel1.Text = "Bilgileri Güncelle";
+            linkLabel1.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // modernPanel1
+            // 
+            modernPanel1.BackColor = Color.FromArgb(48, 78, 100);
+            modernPanel1.BorderRadius = 50;
+            modernPanel1.Controls.Add(label10);
+            modernPanel1.Location = new Point(22, 126);
+            modernPanel1.Name = "modernPanel1";
+            modernPanel1.Size = new Size(402, 413);
+            modernPanel1.TabIndex = 10;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Nirmala UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label10.ForeColor = SystemColors.Control;
+            label10.Location = new Point(49, 24);
+            label10.Name = "label10";
+            label10.Size = new Size(316, 50);
+            label10.TabIndex = 0;
+            label10.Text = "Mehmet Çakmak";
+            // 
+            // monthCalendar1
+            // 
+            monthCalendar1.BackColor = Color.White;
+            monthCalendar1.CurrentDate = new DateTime(2024, 8, 17, 0, 0, 0, 0);
+            monthCalendar1.DaysForeColor = Color.Black;
+            monthCalendar1.ForeColor = SystemColors.Highlight;
+            monthCalendar1.HeaderBackgroundColor = Color.DarkSlateBlue;
+            monthCalendar1.HeaderForeColor = Color.WhiteSmoke;
+            monthCalendar1.Location = new Point(3, 3);
+            monthCalendar1.Name = "monthCalendar1";
+            monthCalendar1.SelectedDayBorderColor = Color.Red;
+            monthCalendar1.Size = new Size(413, 263);
+            monthCalendar1.TabIndex = 11;
             // 
             // panel5
             // 
-            panel5.BackColor = Color.FromArgb(39, 39, 58);
-            panel5.Controls.Add(panel2);
-            panel5.Controls.Add(panel3);
-            panel5.Controls.Add(panel4);
-            panel5.Controls.Add(panel1);
-            panel5.Location = new Point(0, 100);
+            panel5.Controls.Add(monthCalendar1);
+            panel5.Location = new Point(444, 270);
             panel5.Name = "panel5";
-            panel5.Size = new Size(910, 189);
-            panel5.TabIndex = 7;
-            // 
-            // panel6
-            // 
-            panel6.BackColor = Color.FromArgb(46, 51, 73);
-            panel6.Controls.Add(label8);
-            panel6.Controls.Add(label9);
-            panel6.Location = new Point(290, 316);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(311, 134);
-            panel6.TabIndex = 8;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.ForeColor = Color.FromArgb(0, 126, 249);
-            label8.Location = new Point(57, 70);
-            label8.Name = "label8";
-            label8.Size = new Size(207, 31);
-            label8.TabIndex = 7;
-            label8.Text = "Prof. Dr. Ali Candar";
+            panel5.Size = new Size(419, 269);
+            panel5.TabIndex = 12;
             // 
             // MainPage
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(46, 51, 73);
-            Controls.Add(panel6);
             Controls.Add(panel5);
+            Controls.Add(panel2);
+            Controls.Add(linkLabel1);
+            Controls.Add(panel3);
+            Controls.Add(modernPanel3);
+            Controls.Add(panel4);
+            Controls.Add(panel1);
             Controls.Add(label1);
+            Controls.Add(modernPanel1);
             Name = "MainPage";
             Size = new Size(910, 640);
             Load += MainPage_Load;
@@ -267,9 +346,11 @@ namespace RandevuSistem
             panel3.PerformLayout();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
+            modernPanel3.ResumeLayout(false);
+            modernPanel3.PerformLayout();
+            modernPanel1.ResumeLayout(false);
+            modernPanel1.PerformLayout();
             panel5.ResumeLayout(false);
-            panel6.ResumeLayout(false);
-            panel6.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -288,9 +369,14 @@ namespace RandevuSistem
         private Label label6;
         private ModernPanel panel4;
         private Label label1;
-        private Label label9;
+        private ModernPanel modernPanel3;
+        private Label label14;
+        private Label label15;
+        private LinkLabel linkLabel1;
+        private ModernPanel modernPanel1;
+        private Label label10;
+        private ModernButton button1;
+        private ModernMonthCalendar monthCalendar1;
         private Panel panel5;
-        private Panel panel6;
-        private Label label8;
     }
 }

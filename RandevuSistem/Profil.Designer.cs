@@ -53,9 +53,8 @@ namespace RandevuSistem
             // panel1
             // 
             panel1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            panel1.BackColor = Color.FromArgb(50, 52, 77);
+            panel1.BackColor = Color.FromArgb(46, 51, 73);
             panel1.BackgroundImageLayout = ImageLayout.None;
-            panel1.BorderStyle = BorderStyle.FixedSingle;
             panel1.Controls.Add(button3);
             panel1.Controls.Add(button4);
             panel1.Controls.Add(label7);
@@ -75,6 +74,7 @@ namespace RandevuSistem
             panel1.Name = "panel1";
             panel1.Size = new Size(929, 663);
             panel1.TabIndex = 3;
+            panel1.VisibleChanged += panel1_VisibleChanged;
             panel1.Paint += panel1_Paint;
             // 
             // button3
@@ -310,7 +310,7 @@ namespace RandevuSistem
             Controls.Add(panel1);
             Margin = new Padding(0);
             Name = "Profil";
-            Size = new Size(917, 573);
+            Size = new Size(895, 544);
             Load += Profil_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

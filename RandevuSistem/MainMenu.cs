@@ -28,7 +28,7 @@ namespace RandevuSistem
             recLbl2 = new Rectangle(label2.Location, label2.Size);
             recpanel4 = new Rectangle(panel4.Location, panel4.Size);
 
-            profil = new Profil();
+            profil = new Profil(this.sg);
             recProfil = new Rectangle(profil.Location, profil.Size);
 
         }
@@ -104,17 +104,18 @@ namespace RandevuSistem
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(50, 52, 77);
+            panel1.BorderStyle = BorderStyle.FixedSingle;
             panel1.Controls.Add(AnaMenubut);
             panel1.Controls.Add(randevularımbut);
             panel1.Controls.Add(panel3);
             panel1.Controls.Add(talepButton);
             panel1.Controls.Add(randevubuton);
             panel1.Dock = DockStyle.Left;
+            panel1.ForeColor = SystemColors.ButtonHighlight;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(287, 730);
             panel1.TabIndex = 14;
-            panel1.Paint += panel1_Paint;
             // 
             // AnaMenubut
             // 
@@ -172,7 +173,7 @@ namespace RandevuSistem
             panel3.Dock = DockStyle.Top;
             panel3.Location = new Point(0, 0);
             panel3.Name = "panel3";
-            panel3.Size = new Size(287, 223);
+            panel3.Size = new Size(285, 223);
             panel3.TabIndex = 15;
             // 
             // label1
@@ -189,16 +190,15 @@ namespace RandevuSistem
             // 
             // profilButton
             // 
-            profilButton.BackColor = Color.FromArgb(39, 39, 58);
+            profilButton.BackColor = Color.FromArgb(39, 39, 52);
             profilButton.BackgroundImage = (Image)resources.GetObject("profilButton.BackgroundImage");
             profilButton.BackgroundImageLayout = ImageLayout.Stretch;
-            profilButton.BorderColor = Color.Transparent;
-            profilButton.BorderRadius = 30;
-            profilButton.FlatAppearance.BorderColor = Color.FromArgb(255, 255, 128);
-            profilButton.FlatAppearance.BorderSize = 0;
+            profilButton.BorderColor = Color.White;
+            profilButton.BorderRadius = 100;
+            profilButton.FlatAppearance.BorderColor = Color.FromArgb(39, 39, 52);
             profilButton.FlatStyle = FlatStyle.Flat;
             profilButton.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            profilButton.ImageAlign = ContentAlignment.MiddleLeft;
+            profilButton.ImageAlign = ContentAlignment.TopLeft;
             profilButton.Location = new Point(83, 21);
             profilButton.Name = "profilButton";
             profilButton.Padding = new Padding(5);
@@ -214,13 +214,12 @@ namespace RandevuSistem
             // panel2
             // 
             panel2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            panel2.BackColor = Color.FromArgb(50, 52, 77);
+            panel2.BackColor = Color.FromArgb(39, 39, 58);
             panel2.Controls.Add(label2);
             panel2.Location = new Point(287, 0);
             panel2.Name = "panel2";
             panel2.Size = new Size(913, 90);
             panel2.TabIndex = 15;
-            panel2.Paint += panel2_Paint;
             // 
             // label2
             // 
@@ -233,17 +232,15 @@ namespace RandevuSistem
             label2.Size = new Size(486, 50);
             label2.TabIndex = 0;
             label2.Text = "Sağlıklı Günler Mehmet Çakmak!";
-            label2.Click += label2_Click;
             // 
             // panel4
             // 
             panel4.Anchor = AnchorStyles.Left;
             panel4.BackColor = Color.Aqua;
-            panel4.Location = new Point(286, 89);
+            panel4.Location = new Point(287, 89);
             panel4.Name = "panel4";
-            panel4.Size = new Size(913, 640);
+            panel4.Size = new Size(912, 640);
             panel4.TabIndex = 16;
-            panel4.Paint += panel4_Paint;
             // 
             // MainMenu
             // 
@@ -262,6 +259,12 @@ namespace RandevuSistem
             ResumeLayout(false);
         }
 
+        private SifreniziGirin sg = new SifreniziGirin()
+        {
+            Location = new System.Drawing.Point(0, 0),
+            Size = new System.Drawing.Size(913, 640),
+            AutoScroll = false
+        };
         private ModernButton talepbuton;
         private Panel panel1;
         private ModernButton profilButton;
@@ -314,7 +317,7 @@ namespace RandevuSistem
             int newX = (int)(r.X * xRatio);
             int newY = (int)(r.Y * yRatio);
 
-            int newHeight = (int)(r.Height * yRatio * 1.2);
+            int newHeight = (int)(r.Height * yRatio);
             c.Size = new Size(this.Width - 287, newHeight);
 
         }
@@ -351,7 +354,6 @@ namespace RandevuSistem
             this.randevubuton.BackColor = Color.FromArgb(50, 52, 77);
             this.randevularımbut.BackColor = Color.FromArgb(50, 52, 77);
             this.profilButton.BackColor = Color.FromArgb(50, 52, 77);
-            this.panel2.BackColor = Color.FromArgb(50, 52, 77);
             this.AnaMenubut.BackColor = Color.FromArgb(50, 52, 77);
         }
         private void changeThema(ModernButton selectedButton)
@@ -359,27 +361,22 @@ namespace RandevuSistem
             if (selectedButton.Tag == "Talep")
             {
                 this.talepButton.BackColor = Color.FromArgb(30, 215, 96);
-                this.panel2.BackColor = Color.FromArgb(30, 215, 96);
             }
             else if (selectedButton.Tag == "Randevu")
             {
                 this.randevubuton.BackColor = Color.FromArgb(43, 163, 200);
-                this.panel2.BackColor = Color.FromArgb(43, 163, 200);
             }
             else if (selectedButton.Tag == "Randevularım")
             {
                 this.randevularımbut.BackColor = Color.FromArgb(230, 125, 60);
-                this.panel2.BackColor = Color.FromArgb(230, 125, 60); ;
             }
             else if (selectedButton.Tag == "Profil")
             {
                 this.profilButton.BackColor = Color.FromArgb(222, 1, 50);
-                this.panel2.BackColor = Color.FromArgb(222, 1, 50);
             }
             else if (selectedButton.Tag == "Ana")
             {
                 this.AnaMenubut.BackColor = Color.FromArgb(60, 60, 60);
-                this.panel2.BackColor = Color.FromArgb(60, 60, 60);
             }
         }
         private void talepButton_Click(object sender, EventArgs e)
@@ -429,11 +426,14 @@ namespace RandevuSistem
             resetThema();
             changeThema(profilButton);
             this.panel4.Controls.Clear();
-            profil = new Profil();
+            profil = new Profil(sg);
             this.profil.Size = panel4.Size;
             profil.resize_Control_noLocation(profil.panel1, profil.recPanel);
             selectedBut = profilButton;
             this.panel4.Controls.Add(profil);
+            this.panel4.Controls.Add(sg);
+
+            sg.Hide();
 
         }
         private void AnaMenuBut_Click(object sender, EventArgs e)
@@ -453,7 +453,6 @@ namespace RandevuSistem
         private void MainMenu_Load(object sender, EventArgs e)
         {
             this.Invalidate();
-            resize_Panel(panel2, recPanel2);
             this.AnaMenubut.BackColor = Color.FromArgb(60, 60, 60);
             this.panel4.Controls.Clear();
             mainPage = new MainPage();
@@ -470,20 +469,10 @@ namespace RandevuSistem
             resize_Control_nosize(label2, recLbl2);
             resize_Panel4(panel4, recpanel4);
             panel1.Height= this.Height;
-            if (selectedBut.Tag == "Talep")
-            {
-                this.talepButton.BackColor = Color.FromArgb(30, 215, 96);
-                this.panel2.BackColor = Color.FromArgb(30, 215, 96);
-            }
-            else if (selectedBut.Tag == "Randevu")
-            {
-                this.randevubuton.BackColor = Color.FromArgb(43, 163, 200);
-                this.panel2.BackColor = Color.FromArgb(43, 163, 200);
-            }
-            else if (selectedBut.Tag == "Randevularım")
+            if (selectedBut.Tag == "Randevularım")
             {
                 this.randevularımbut.BackColor = Color.FromArgb(230, 125, 60);
-                this.panel2.BackColor = Color.FromArgb(230, 125, 60); ;
+
             }
             else if (selectedBut.Tag == "Profil")
             {
@@ -491,35 +480,8 @@ namespace RandevuSistem
                 this.profil.panel1.Location = new Point(0, 0);
                 profil.resize_Control_noLocation(panel1, profil.recPanel);
 
-                profil.resize_Control_noLocation(profil.panel1, recProfil);
-                
+                profil.resize_Control_noLocation(profil.panel1, recProfil);    
             }
-            else if (selectedBut.Tag == "Ana")
-            {
-                this.profil.Size = panel4.Size;
-                this.profil.panel1.Location = new Point(0, 0);
-                profil.resize_Control_noLocation(profil.panel1, recProfil);
-            }
-
-        }
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

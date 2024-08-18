@@ -40,8 +40,11 @@ namespace RandevuSistem
         private Size originalParentSize;
         private Size originalPanelSize;
         private Person person;
-        public Profil()
+        private SifreniziGirin sg;
+
+        public Profil(SifreniziGirin sg)
         {
+            this.sg = sg;
             InitializeComponent();
             this.BorderStyle = BorderStyle.None;
             this.DoubleBuffered = true;
@@ -84,6 +87,7 @@ namespace RandevuSistem
             resize_Control_nosize(label6, recLbl6);
             resize_Control_nosize(label7, recLbl7);
             resize_Control_noLocation(panel1, recPanel);
+
 
         }
         private void resize_Control(Control c, Rectangle r)
@@ -192,16 +196,8 @@ namespace RandevuSistem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Controls.Clear();
-            SifreniziGirin sg = new SifreniziGirin
-            {
-                Location = new System.Drawing.Point(0, 0),
-                Size = new System.Drawing.Size(1200, 750),
-                AutoScroll = false
-            };
-            this.Size = new System.Drawing.Size(1200, 750);
-            this.AutoScroll = false;
-            this.Controls.Add(sg);
+            this.Hide();
+            sg.Show();
         }
 
 
@@ -291,6 +287,7 @@ namespace RandevuSistem
             button1.Location = button4.Location;
             this.button1.Visible = true;
             this.button2.Visible = true;
+            MessageBox.Show("İşlem iptal edildi.");
         }
 
         private async void button3_Click(object sender, EventArgs e)
@@ -327,6 +324,11 @@ namespace RandevuSistem
                 // Kullanıcı 'Hayır' dedi, işlemi iptal et
                 MessageBox.Show("İşlem iptal edildi.");
             }
+        }
+
+        private void panel1_VisibleChanged(object sender, EventArgs e)
+        {
+            this.Size = this.Parent.Size;
         }
     }
 }

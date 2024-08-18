@@ -251,7 +251,6 @@
             button1.TabIndex = 61;
             button1.Text = "Kaydet";
             button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click_1;
             // 
             // modernButton1
             // 
@@ -303,7 +302,6 @@
             Controls.Add(button1);
             Name = "Kayıt";
             Size = new Size(1208, 750);
-            Load += Kayıt_Load;
             ResumeLayout(false);
             PerformLayout();
         }

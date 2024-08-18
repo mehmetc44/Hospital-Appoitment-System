@@ -174,8 +174,7 @@ namespace RandevuSistem
             }
             else
             {
-                EksikBilgiGirdiniz eb = new EksikBilgiGirdiniz();
-                eb.Show();
+                MessageBox.Show("Eksik bilgi girdiniz.");
             }
         }
 

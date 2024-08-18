@@ -1,4 +1,5 @@
-﻿namespace RandevuSistem
+﻿using RandevuSistem.ModernElements;
+namespace RandevuSistem
 {
     partial class RandevuAL
     {
@@ -28,239 +29,218 @@
         /// </summary>
         private void InitializeComponent()
         {
-            GroupBox ILGroupBox;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RandevuAL));
-            ILcomboBox = new ComboBox();
-            panel1 = new Panel();
-            button3 = new Button();
-            label2 = new Label();
-            label1 = new Label();
-            groupBox3 = new GroupBox();
-            DRcomboBox = new ComboBox();
-            groupBox2 = new GroupBox();
-            HastaneCombobox = new ComboBox();
-            groupBox4 = new GroupBox();
-            KlinikcomboBox = new ComboBox();
-            groupBox8 = new GroupBox();
+            label6 = new Label();
             dateTimePicker1 = new DateTimePicker();
-            button2 = new Button();
-            ILGroupBox = new GroupBox();
-            ILGroupBox.SuspendLayout();
-            panel1.SuspendLayout();
-            groupBox3.SuspendLayout();
-            groupBox2.SuspendLayout();
-            groupBox4.SuspendLayout();
-            groupBox8.SuspendLayout();
+            DRcomboBox = new ComboBox();
+            label7 = new Label();
+            KlinikComboBox = new ComboBox();
+            label3 = new Label();
+            HastaneComboBox1 = new ComboBox();
+            label5 = new Label();
+            IlcomboBox = new ComboBox();
+            label4 = new Label();
+            button3 = new ModernButton();
+            label1 = new Label();
             SuspendLayout();
             // 
-            // ILGroupBox
+            // label6
             // 
-            ILGroupBox.Controls.Add(ILcomboBox);
-            ILGroupBox.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            ILGroupBox.Location = new Point(51, 149);
-            ILGroupBox.Name = "ILGroupBox";
-            ILGroupBox.Size = new Size(485, 70);
-            ILGroupBox.TabIndex = 1;
-            ILGroupBox.TabStop = false;
-            ILGroupBox.Text = "İl";
-            ILGroupBox.UseCompatibleTextRendering = true;
-            ILGroupBox.Enter += ILGroupBox_Enter;
+            label6.AutoSize = true;
+            label6.BackColor = Color.Transparent;
+            label6.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.ForeColor = Color.Silver;
+            label6.Location = new Point(517, 140);
+            label6.Name = "label6";
+            label6.Size = new Size(64, 28);
+            label6.TabIndex = 92;
+            label6.Text = "Tarih:";
             // 
-            // ILcomboBox
+            // dateTimePicker1
             // 
-            ILcomboBox.DropDownHeight = 300;
-            ILcomboBox.FormattingEnabled = true;
-            ILcomboBox.IntegralHeight = false;
-            ILcomboBox.Location = new Point(6, 26);
-            ILcomboBox.Name = "ILcomboBox";
-            ILcomboBox.Size = new Size(321, 33);
-            ILcomboBox.TabIndex = 0;
-            ILcomboBox.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            dateTimePicker1.CalendarMonthBackground = Color.White;
+            dateTimePicker1.Location = new Point(517, 180);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(342, 27);
+            dateTimePicker1.TabIndex = 80;
+            dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
             // 
-            // panel1
+            // DRcomboBox
             // 
-            panel1.BackColor = Color.Gainsboro;
-            panel1.Controls.Add(button3);
-            panel1.Controls.Add(label2);
-            panel1.Controls.Add(label1);
-            panel1.Controls.Add(groupBox3);
-            panel1.Controls.Add(groupBox2);
-            panel1.Controls.Add(groupBox4);
-            panel1.Controls.Add(groupBox8);
-            panel1.Controls.Add(ILGroupBox);
-            panel1.Location = new Point(164, 37);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(590, 647);
-            panel1.TabIndex = 0;
-            panel1.Paint += panel1_Paint_3;
+            DRcomboBox.BackColor = Color.FromArgb(39, 39, 58);
+            DRcomboBox.DropDownHeight = 200;
+            DRcomboBox.FlatStyle = FlatStyle.Flat;
+            DRcomboBox.Font = new Font("Nirmala UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            DRcomboBox.ForeColor = Color.FromArgb(0, 126, 249);
+            DRcomboBox.FormattingEnabled = true;
+            DRcomboBox.IntegralHeight = false;
+            DRcomboBox.Location = new Point(517, 390);
+            DRcomboBox.Name = "DRcomboBox";
+            DRcomboBox.Size = new Size(342, 39);
+            DRcomboBox.TabIndex = 91;
+            DRcomboBox.SelectedIndexChanged += DRcomboBox_SelectedIndexChanged_1;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.BackColor = Color.Transparent;
+            label7.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.ForeColor = Color.Silver;
+            label7.Location = new Point(517, 349);
+            label7.Name = "label7";
+            label7.Size = new Size(84, 28);
+            label7.TabIndex = 90;
+            label7.Text = "Doktor:";
+            // 
+            // KlinikComboBox
+            // 
+            KlinikComboBox.BackColor = Color.FromArgb(39, 39, 58);
+            KlinikComboBox.DropDownHeight = 200;
+            KlinikComboBox.FlatStyle = FlatStyle.Flat;
+            KlinikComboBox.Font = new Font("Nirmala UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            KlinikComboBox.ForeColor = Color.FromArgb(0, 126, 249);
+            KlinikComboBox.FormattingEnabled = true;
+            KlinikComboBox.IntegralHeight = false;
+            KlinikComboBox.Location = new Point(67, 390);
+            KlinikComboBox.Name = "KlinikComboBox";
+            KlinikComboBox.Size = new Size(342, 39);
+            KlinikComboBox.TabIndex = 89;
+            KlinikComboBox.SelectedIndexChanged += KlinikComboBox_SelectedIndexChanged;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = Color.Silver;
+            label3.Location = new Point(67, 350);
+            label3.Name = "label3";
+            label3.Size = new Size(72, 28);
+            label3.TabIndex = 88;
+            label3.Text = "Klinik:";
+            // 
+            // HastaneComboBox1
+            // 
+            HastaneComboBox1.BackColor = Color.FromArgb(39, 39, 58);
+            HastaneComboBox1.DropDownHeight = 200;
+            HastaneComboBox1.FlatStyle = FlatStyle.Flat;
+            HastaneComboBox1.Font = new Font("Nirmala UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            HastaneComboBox1.ForeColor = Color.FromArgb(0, 126, 249);
+            HastaneComboBox1.FormattingEnabled = true;
+            HastaneComboBox1.IntegralHeight = false;
+            HastaneComboBox1.Location = new Point(67, 290);
+            HastaneComboBox1.Name = "HastaneComboBox1";
+            HastaneComboBox1.Size = new Size(792, 39);
+            HastaneComboBox1.TabIndex = 87;
+            HastaneComboBox1.SelectedIndexChanged += HastaneComboBox1_SelectedIndexChanged;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
+            label5.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.ForeColor = Color.Silver;
+            label5.Location = new Point(67, 250);
+            label5.Name = "label5";
+            label5.Size = new Size(94, 28);
+            label5.TabIndex = 86;
+            label5.Text = "Hastane:";
+            // 
+            // IlcomboBox
+            // 
+            IlcomboBox.BackColor = Color.FromArgb(39, 39, 58);
+            IlcomboBox.DropDownHeight = 200;
+            IlcomboBox.FlatStyle = FlatStyle.Flat;
+            IlcomboBox.Font = new Font("Nirmala UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            IlcomboBox.ForeColor = Color.FromArgb(0, 126, 249);
+            IlcomboBox.FormattingEnabled = true;
+            IlcomboBox.IntegralHeight = false;
+            IlcomboBox.Location = new Point(67, 180);
+            IlcomboBox.Name = "IlcomboBox";
+            IlcomboBox.Size = new Size(342, 39);
+            IlcomboBox.TabIndex = 85;
+            IlcomboBox.SelectedIndexChanged += IlcomboBox_SelectedIndexChanged;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
+            label4.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.ForeColor = Color.Silver;
+            label4.Location = new Point(67, 140);
+            label4.Name = "label4";
+            label4.Size = new Size(70, 28);
+            label4.TabIndex = 84;
+            label4.Text = "Şehir:";
             // 
             // button3
             // 
-            button3.BackColor = Color.Turquoise;
-            button3.Location = new Point(203, 538);
+            button3.BackColor = Color.SeaGreen;
+            button3.BorderColor = Color.Transparent;
+            button3.BorderRadius = 30;
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.ForeColor = SystemColors.HighlightText;
+            button3.Location = new Point(373, 483);
             button3.Name = "button3";
-            button3.Size = new Size(135, 47);
-            button3.TabIndex = 8;
-            button3.Text = "Randevu Oluştur";
+            button3.SelectionColor = Color.Red;
+            button3.Size = new Size(161, 60);
+            button3.TabIndex = 83;
+            button3.Text = "Randevu Al";
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.ForeColor = Color.Red;
-            label2.Location = new Point(357, 551);
-            label2.Name = "label2";
-            label2.Size = new Size(0, 20);
-            label2.TabIndex = 7;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(57, 71);
+            label1.Font = new Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = SystemColors.AppWorkspace;
+            label1.Location = new Point(40, 44);
             label1.Name = "label1";
-            label1.Size = new Size(240, 38);
-            label1.TabIndex = 1;
+            label1.Size = new Size(320, 50);
+            label1.TabIndex = 81;
             label1.Text = "Randevu Bilgileri";
-            label1.Click += label1_Click;
-            // 
-            // groupBox3
-            // 
-            groupBox3.Controls.Add(DRcomboBox);
-            groupBox3.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            groupBox3.Location = new Point(51, 377);
-            groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(485, 70);
-            groupBox3.TabIndex = 4;
-            groupBox3.TabStop = false;
-            groupBox3.Text = "Doktor";
-            // 
-            // DRcomboBox
-            // 
-            DRcomboBox.DropDownHeight = 300;
-            DRcomboBox.FormattingEnabled = true;
-            DRcomboBox.IntegralHeight = false;
-            DRcomboBox.Location = new Point(6, 26);
-            DRcomboBox.Name = "DRcomboBox";
-            DRcomboBox.Size = new Size(321, 33);
-            DRcomboBox.TabIndex = 0;
-            DRcomboBox.SelectedIndexChanged += DRcomboBox_SelectedIndexChanged;
-            // 
-            // groupBox2
-            // 
-            groupBox2.Controls.Add(HastaneCombobox);
-            groupBox2.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            groupBox2.Location = new Point(51, 225);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(485, 70);
-            groupBox2.TabIndex = 2;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "Hastane";
-            // 
-            // HastaneCombobox
-            // 
-            HastaneCombobox.DropDownHeight = 300;
-            HastaneCombobox.FormattingEnabled = true;
-            HastaneCombobox.IntegralHeight = false;
-            HastaneCombobox.Location = new Point(6, 26);
-            HastaneCombobox.Name = "HastaneCombobox";
-            HastaneCombobox.Size = new Size(321, 33);
-            HastaneCombobox.TabIndex = 0;
-            HastaneCombobox.SelectedIndexChanged += HastaneCombobox_SelectedIndexChanged;
-            // 
-            // groupBox4
-            // 
-            groupBox4.Controls.Add(KlinikcomboBox);
-            groupBox4.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            groupBox4.Location = new Point(51, 301);
-            groupBox4.Name = "groupBox4";
-            groupBox4.Size = new Size(485, 70);
-            groupBox4.TabIndex = 3;
-            groupBox4.TabStop = false;
-            groupBox4.Text = "Klinik";
-            // 
-            // KlinikcomboBox
-            // 
-            KlinikcomboBox.DropDownHeight = 300;
-            KlinikcomboBox.FormattingEnabled = true;
-            KlinikcomboBox.IntegralHeight = false;
-            KlinikcomboBox.Location = new Point(6, 26);
-            KlinikcomboBox.Name = "KlinikcomboBox";
-            KlinikcomboBox.Size = new Size(321, 33);
-            KlinikcomboBox.TabIndex = 0;
-            KlinikcomboBox.SelectedIndexChanged += KlinikcomboBox_SelectedIndexChanged;
-            // 
-            // groupBox8
-            // 
-            groupBox8.Controls.Add(dateTimePicker1);
-            groupBox8.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            groupBox8.Location = new Point(51, 453);
-            groupBox8.Name = "groupBox8";
-            groupBox8.Size = new Size(485, 70);
-            groupBox8.TabIndex = 5;
-            groupBox8.TabStop = false;
-            groupBox8.Text = "Tarih";
-            // 
-            // dateTimePicker1
-            // 
-            dateTimePicker1.Location = new Point(6, 30);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(250, 31);
-            dateTimePicker1.TabIndex = 0;
-            dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.LightSeaGreen;
-            button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
-            button2.BackgroundImageLayout = ImageLayout.Stretch;
-            button2.Location = new Point(19, 23);
-            button2.Name = "button2";
-            button2.Size = new Size(64, 55);
-            button2.TabIndex = 54;
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click_1;
             // 
             // RandevuAL
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
-            BackColor = Color.FromArgb(0, 192, 192);
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            Controls.Add(button2);
-            Controls.Add(panel1);
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            BackColor = Color.FromArgb(46, 51, 73);
+            Controls.Add(label6);
+            Controls.Add(dateTimePicker1);
+            Controls.Add(DRcomboBox);
+            Controls.Add(label7);
+            Controls.Add(KlinikComboBox);
+            Controls.Add(label3);
+            Controls.Add(HastaneComboBox1);
+            Controls.Add(label5);
+            Controls.Add(IlcomboBox);
+            Controls.Add(label4);
+            Controls.Add(button3);
+            Controls.Add(label1);
             Name = "RandevuAL";
-            Size = new Size(1200, 750);
+            Size = new Size(912, 640);
             Load += RandevuAL_Load;
-            ILGroupBox.ResumeLayout(false);
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            groupBox3.ResumeLayout(false);
-            groupBox2.ResumeLayout(false);
-            groupBox4.ResumeLayout(false);
-            groupBox8.ResumeLayout(false);
+            Resize += RandevuAL_Resize;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-        private VScrollBar vScrollBar1;
-        private VScrollBar vScrollBar2;
-        private Panel panel1;
-        private GroupBox ILGroupBox;
-        private ComboBox ILcomboBox;
-        private GroupBox groupBox3;
-        private ComboBox DRcomboBox;
-        private GroupBox groupBox2;
-        private ComboBox HastaneCombobox;
-        private GroupBox groupBox4;
-        private ComboBox KlinikcomboBox;
-        private GroupBox groupBox8;
-        private Label label2;
-        private Label label1;
+
+        private Label label6;
         private DateTimePicker dateTimePicker1;
-        private Button button3;
-        private Button button2;
+        private ComboBox DRcomboBox;
+        private Label label7;
+        private ComboBox KlinikComboBox;
+        private Label label3;
+        private ComboBox HastaneComboBox1;
+        private Label label5;
+        private ComboBox IlcomboBox;
+        private Label label4;
+        private ModernButton button3;
+        private Label label1;
     }
 }

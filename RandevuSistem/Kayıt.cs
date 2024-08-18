@@ -106,63 +106,7 @@ namespace RandevuSistem
             int newY = (int)(r.Y * yRatio);
             c.Location = new Point(newX, newY);
         }
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Kayıt_Load(object sender, EventArgs e)
-        {
-
-        }
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -252,17 +196,6 @@ namespace RandevuSistem
                 MessageBox.Show("Lütfen tüm alanları doldurun.");
             }
         }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void modernButton1_Click(object sender, EventArgs e)
         {
             this.Controls.Clear();
@@ -282,9 +215,5 @@ namespace RandevuSistem
             modernButton1.BackColor = Color.Transparent;
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-   
-        }
     }
 }
