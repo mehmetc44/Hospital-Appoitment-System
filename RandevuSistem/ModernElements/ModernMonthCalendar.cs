@@ -24,7 +24,6 @@ public class ModernMonthCalendar : Control
         _prevMonthButton = new Button
         {
             Size = new Size(30, 30),
-            Location = new Point(0, 0),
             Text = "<",
             FlatStyle = FlatStyle.Flat,
             BackColor = HeaderBackgroundColor,
@@ -37,7 +36,6 @@ public class ModernMonthCalendar : Control
         _nextMonthButton = new Button
         {
             Size = new Size(30, 30),
-            Location = new Point(this.Width - 30, 0),
             Text = ">",
             FlatStyle = FlatStyle.Flat,
             BackColor = HeaderBackgroundColor,
@@ -45,6 +43,9 @@ public class ModernMonthCalendar : Control
         };
         _nextMonthButton.Click += (sender, e) => ChangeMonth(1);
         this.Controls.Add(_nextMonthButton);
+
+        // Butonların doğru yerleşimini sağlamak için ayarları güncelle
+        UpdateButtonLocations();
     }
 
     public DateTime CurrentDate
@@ -66,8 +67,24 @@ public class ModernMonthCalendar : Control
 
     private void UpdateButtonLocations()
     {
-        _prevMonthButton.Location = new Point(0, 0);
-        _nextMonthButton.Location = new Point(this.Width - _nextMonthButton.Width, 0);
+        if (_prevMonthButton != null && _nextMonthButton != null)
+        {
+            int headerHeight = 30;
+            int buttonSize = headerHeight;
+
+            _prevMonthButton.Size = new Size(buttonSize, buttonSize);
+            _prevMonthButton.Location = new Point(0, 0);
+
+            _nextMonthButton.Size = new Size(buttonSize, buttonSize);
+            _nextMonthButton.Location = new Point(this.Width - buttonSize, 0);
+        }
+    }
+
+    protected override void OnSizeChanged(EventArgs e)
+    {
+        base.OnSizeChanged(e);
+        UpdateButtonLocations();
+        Invalidate();
     }
 
     protected override void OnPaint(PaintEventArgs e)
@@ -77,7 +94,8 @@ public class ModernMonthCalendar : Control
         Graphics g = e.Graphics;
 
         // Başlık kısmı
-        Rectangle headerRect = new Rectangle(30, 0, this.Width - 60, 30);
+        int headerHeight = 30;
+        Rectangle headerRect = new Rectangle(_prevMonthButton.Width, 0, this.Width - 2 * _prevMonthButton.Width, headerHeight);
         using (SolidBrush headerBrush = new SolidBrush(HeaderBackgroundColor))
         {
             g.FillRectangle(headerBrush, headerRect);
@@ -93,7 +111,7 @@ public class ModernMonthCalendar : Control
         int firstDayOfWeek = (int)firstDayOfMonth.DayOfWeek;
 
         int cellWidth = this.Width / 7;
-        int cellHeight = (this.Height - 30) / 6;
+        int cellHeight = (this.Height - headerHeight) / 6;
 
         for (int day = 1; day <= daysInMonth; day++)
         {
@@ -103,7 +121,7 @@ public class ModernMonthCalendar : Control
 
             Rectangle dayRect = new Rectangle(
                 dayOfWeek * cellWidth,
-                30 + weekOfMonth * cellHeight,
+                headerHeight + weekOfMonth * cellHeight,
                 cellWidth,
                 cellHeight
             );

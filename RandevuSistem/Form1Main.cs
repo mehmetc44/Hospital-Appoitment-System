@@ -99,24 +99,10 @@ namespace RandevuSistem
             int newY = (int)(r.Y * yRatio);
             c.Location = new Point(newX, newY);
         }
-
-
-
-
-
         public class UserInfo
         {
             public static string tc { get; set; }
         }
-
-
-
-
-        private void linkLabel2_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
-
         private async void button1_Click(object sender, EventArgs e)
         {
             if ((this.textBox1.Text != "") && (this.textBox2.Text != ""))
@@ -177,21 +163,11 @@ namespace RandevuSistem
                 MessageBox.Show("Eksik bilgi girdiniz.");
             }
         }
-
-
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form1Main_Load(object sender, EventArgs e)
         {
             this.Size = this.Parent.Size;
 
         }
-
-
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Controls.Clear();
@@ -200,12 +176,6 @@ namespace RandevuSistem
             sd.Size = this.Parent.Size; // Boyutu belirleyin
             this.Controls.Add(sd);
         }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Controls.Clear();
@@ -214,41 +184,6 @@ namespace RandevuSistem
             kayıt.Size = this.Parent.Size;
             kayıt.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             this.Controls.Add(kayıt);
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click_2(object sender, EventArgs e)
-        {
-
         }
     }
 }

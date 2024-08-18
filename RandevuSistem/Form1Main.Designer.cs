@@ -93,7 +93,6 @@ namespace RandevuSistem
             textBox1.PlaceholderText = "TC Kimlik No";
             textBox1.Size = new Size(338, 36);
             textBox1.TabIndex = 6;
-            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // button1
             // 
@@ -131,8 +130,6 @@ namespace RandevuSistem
             textBox2.Size = new Size(338, 36);
             textBox2.TabIndex = 7;
             textBox2.UseSystemPasswordChar = true;
-            textBox2.TextChanged += textBox2_TextChanged;
-            // 
             // panel1
             // 
             panel1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
@@ -149,7 +146,6 @@ namespace RandevuSistem
             panel1.Name = "panel1";
             panel1.Size = new Size(507, 750);
             panel1.TabIndex = 12;
-            panel1.Paint += panel1_Paint;
             // 
             // label2
             // 
@@ -163,7 +159,6 @@ namespace RandevuSistem
             label2.TabIndex = 11;
             label2.Text = "MedikApp";
             label2.TextAlign = ContentAlignment.MiddleCenter;
-            label2.Click += label2_Click;
             // 
             // pictureBox1
             // 
@@ -174,7 +169,6 @@ namespace RandevuSistem
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 13;
             pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click_2;
             // 
             // Form1Main
             // 

@@ -72,7 +72,7 @@ namespace RandevuSistem
             panel1.Controls.Add(pictureBox1);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(929, 663);
+            panel1.Size = new Size(916, 663);
             panel1.TabIndex = 3;
             panel1.VisibleChanged += panel1_VisibleChanged;
             panel1.Paint += panel1_Paint;
@@ -310,7 +310,7 @@ namespace RandevuSistem
             Controls.Add(panel1);
             Margin = new Padding(0);
             Name = "Profil";
-            Size = new Size(895, 544);
+            Size = new Size(874, 523);
             Load += Profil_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
