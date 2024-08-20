@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 namespace RandevuSistem.Classes.DataClasses
 {
     internal class Doktorlar
+
     {
         public int id = 0;
         public string doktorIsim = "";
