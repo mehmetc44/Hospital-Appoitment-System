@@ -17,6 +17,7 @@ namespace RandevuSistem
         public Randevularım()
         {
             InitializeComponent();
+            this.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
         }
         List<Randevular> randevular;
         private async Task<List<Randevular>> GetRandevular(string tc)
@@ -51,7 +52,13 @@ namespace RandevuSistem
             }
 
         }
-
+        private void Randevularım_Resize(object sender, EventArgs e)
+        {
+            if (this.Height > panel1.Height)
+            {
+                panel1.Height = this.Height;
+            }
+        }
 
         private void kayıt1_Load(object sender, EventArgs e)
         {
@@ -121,35 +128,29 @@ namespace RandevuSistem
         {
             randevular = await GetRandevular(Form1Main.UserInfo.tc);
             int sayi = 1;
-            int x = 80;
-            int y = 290;
+            int y = 230;
             foreach (Randevular randevu in randevular)
             {
                 int sonuc = Hesaplamalar.TarihKarsilastir(randevu.tarih, DateTime.Now.ToString());
                 if (sonuc >= 0)
                 {
+
                     RandevularımGB randevularımgb1 = new RandevularımGB();
-                    randevularımgb1.Location = new Point(x, y);
+                    randevularımgb1.Location = new Point(90, y);
                     randevularımgb1.Name = $"randevularımgb1";
-                    randevularımgb1.Size = new Size(358, 160);
-                    randevularımgb1.TabIndex = 60;
                     panel1.Controls.Add(randevularımgb1);
                     randevularımgb1.RandevuIptalButon.Tag = randevu.id;
-                    randevularımgb1.label2.Text = $"{Hesaplamalar.GetBolumDescription(randevu.bolumId)}\r\n\r\n{randevu.tarih}\r\n\r\n{randevu.doktorIsim}";
+                    randevularımgb1.label5.Text = randevu.doktorIsim;
+                    randevularımgb1.label6.Text = Hesaplamalar.GetBolumDescription(randevu.bolumId);
+                    randevularımgb1.label7.Text = randevu.tarih;
+                    randevularımgb1.label8.Text = randevu.il;
                     randevularımgb1.groupBox1.Text = randevu.hastane;
-                    if (x > 180)
+                    y += 180;
+                    if ((y + randevularımgb1.Height) > panel1.Height)
                     {
-                        x = 80;
-                        y += 190;
+                        panel1.Height = y + randevularımgb1.Height + 20;
                     }
-                    else
-                    {
-                        x += 380;
-                    }
-
                 }
-
-
             }
         }
 
@@ -190,5 +191,17 @@ namespace RandevuSistem
             menu.AutoScroll = false;
             this.Controls.Add(menu);
         }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Resize(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }

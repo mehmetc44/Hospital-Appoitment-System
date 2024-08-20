@@ -108,8 +108,6 @@ namespace RandevuSistem
             if ((this.textBox1.Text != "") && (this.textBox2.Text != ""))
             {
                 string url = "http://localhost:5294/api/PersonControllers/Kullanici/Login";
-
-                // JSON içeriği oluşturma
                 var jsonContent = new StringContent(
                     $"{{\"tcNumara\": \"{textBox1.Text}\", \"sifre\": \"{textBox2.Text}\"}}",
                     Encoding.UTF8,

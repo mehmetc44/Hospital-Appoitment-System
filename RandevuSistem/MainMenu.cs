@@ -396,6 +396,7 @@ namespace RandevuSistem
 
         private void randevularımbut_Click(object sender, EventArgs e)
         {
+            randevularımbut.Tag = "Randevularım";
             selectedBut = randevularımbut;
             resetThema();
             changeThema(randevularımbut);
@@ -404,8 +405,8 @@ namespace RandevuSistem
 
             randevu.Location = new System.Drawing.Point(0, 0); // Konumu belirleyin
             randevu.Size = this.panel4.Size; // Boyutu belirleyin
+            randevu.panel1.Width = this.panel4.Width;
             this.panel4.Controls.Add(randevu);
-
         }
         private void randevubuton_Click(object sender, EventArgs e)
         {
@@ -471,7 +472,9 @@ namespace RandevuSistem
             panel1.Height= this.Height;
             if (selectedBut.Tag == "Randevularım")
             {
-                this.randevularımbut.BackColor = Color.FromArgb(230, 125, 60);
+                randevu.Location = new System.Drawing.Point(0, 0); // Konumu belirleyin
+                randevu.Size = this.panel4.Size; // Boyutu belirleyin
+                randevu.panel1.Width = this.panel4.Width;
 
             }
             else if (selectedBut.Tag == "Profil")

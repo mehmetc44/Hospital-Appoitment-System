@@ -31,7 +31,7 @@ namespace RandevuSistem
         }
         public async void RandevuIptalButon_Click(object sender, EventArgs e)
         {
-            
+
             string id = RandevuIptalButon.Tag.ToString();
             string url = $"http://localhost:5294/RandevuControllers/RandevuIptal/{id}";
 
@@ -61,6 +61,34 @@ namespace RandevuSistem
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private async void button4_Click(object sender, EventArgs e)
+        {
+            string id = RandevuIptalButon.Tag.ToString();
+            string url = $"http://localhost:5294/RandevuControllers/RandevuIptal/{id}";
+
+            using (HttpClient client = new HttpClient())
+            {
+                try
+                {
+                    HttpResponseMessage response = await client.DeleteAsync(url);
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        MessageBox.Show($"Randevu {id} başarıyla silindi.");
+                        this.groupBox1.Controls.Remove(this.groupBox1);
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Randevu {id} silinirken bir hata oluştu: {response.ReasonPhrase}");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Randevu {id} silinirken bir hata oluştu: {ex.Message}");
+                }
+            }
         }
     }
 }

@@ -16,5 +16,6 @@ namespace RandevuSistem.Classes.DataClasses
         public string doktorIsim;
         public int bolumId;
         public string hastane;
+        public string il;
     }
 }

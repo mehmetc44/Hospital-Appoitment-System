@@ -96,7 +96,7 @@ namespace RandevuSistem
             button2.SelectionColor = Color.Red;
             button2.Size = new Size(176, 61);
             button2.TabIndex = 4;
-            button2.Text = "Giriş";
+            button2.Text = "SMS Gönder";
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 

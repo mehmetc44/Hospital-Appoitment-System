@@ -11,7 +11,7 @@ namespace RandevuSistem.ModernElements
 {
 
 
-internal class ModernButton : Button
+public class ModernButton : Button
     {
         private int borderRadius = 20; // Köşe yuvarlaklık derecesi
         

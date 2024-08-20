@@ -189,7 +189,6 @@ namespace RandevuSistem
             textBox5.Text = (person.Cinsiyet == "1" ? "Erkek" : "Kadın");
             kan = Hesaplamalar.GetKanGurubuById(Int32.Parse(person.KanGurubu));
             comboBox1.Text = kan;
-            label1.Text = $"Sağlıklı günler {person.Isim}!";
         }
 
 
@@ -296,6 +295,7 @@ namespace RandevuSistem
             int kilo = Int32.Parse(person.Kilo);
             string telno = textBox4.Text;
             int kanId = Hesaplamalar.GetKanGurubuId(comboBox1.Text);
+            MessageBox.Show(telno+kanId);
             string tc = Form1Main.UserInfo.tc;
             DialogResult result = MessageBox.Show(
                 "Bilgiler güncellensin mi?",
@@ -305,19 +305,17 @@ namespace RandevuSistem
             );
             if (result == DialogResult.Yes)
             {
-                if ((boy < 300) && (boy > 0) && (kilo > 0) && (kilo < 400))
+                
+                if ((textBox4.Text == person.TelNo) && (comboBox1.Text == kan))
                 {
-                    if ((textBox4.Text == person.TelNo) && (comboBox1.Text == kan))
-                    {
-                        MessageBox.Show("Hiçbir değişiklik yapılmadı.");
-                    }
-                    else
-                    {
-                        User user1 = new User(tc, kanId, boy, kilo, telno);
-                        await UpdateUserAsync(user1);
-                    }
+                    MessageBox.Show("Hiçbir değişiklik yapılmadı.");
                 }
-                else MessageBox.Show("Lütfen geçerli veriler girin. ");
+                else
+                {
+                    User user1 = new User(tc, kanId, boy, kilo, telno);
+                    await UpdateUserAsync(user1);
+                }
+                
             }
             else
             {

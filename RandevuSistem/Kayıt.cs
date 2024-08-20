@@ -106,7 +106,7 @@ namespace RandevuSistem
             int newY = (int)(r.Y * yRatio);
             c.Location = new Point(newX, newY);
         }
-       
+
 
         private void button2_Click(object sender, EventArgs e)
         {

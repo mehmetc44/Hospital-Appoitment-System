@@ -130,6 +130,7 @@ namespace RandevuSistem
             textBox2.Size = new Size(338, 36);
             textBox2.TabIndex = 7;
             textBox2.UseSystemPasswordChar = true;
+            // 
             // panel1
             // 
             panel1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
