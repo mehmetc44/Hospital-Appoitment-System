@@ -215,5 +215,9 @@ namespace RandevuSistem
             modernButton1.BackColor = Color.Transparent;
         }
 
+        private void Kayıt_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

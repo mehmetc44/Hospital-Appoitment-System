@@ -17,7 +17,7 @@ namespace RandevuSistem
         public MainMenu()
         {
             InitializeComponent();
-            
+
             this.selectedBut = profilButton;
             this.BorderStyle = BorderStyle.None;
             this.Resize += MainMenu_Resize;
@@ -241,6 +241,7 @@ namespace RandevuSistem
             panel4.Name = "panel4";
             panel4.Size = new Size(912, 640);
             panel4.TabIndex = 16;
+            panel4.Paint += panel4_Paint;
             // 
             // MainMenu
             // 
@@ -469,7 +470,7 @@ namespace RandevuSistem
             resize_Panel(panel2, recPanel2);
             resize_Control_nosize(label2, recLbl2);
             resize_Panel4(panel4, recpanel4);
-            panel1.Height= this.Height;
+            panel1.Height = this.Height;
             if (selectedBut.Tag == "Randevularım")
             {
                 randevu.Location = new System.Drawing.Point(0, 0); // Konumu belirleyin
@@ -483,8 +484,13 @@ namespace RandevuSistem
                 this.profil.panel1.Location = new Point(0, 0);
                 profil.resize_Control_noLocation(panel1, profil.recPanel);
 
-                profil.resize_Control_noLocation(profil.panel1, recProfil);    
+                profil.resize_Control_noLocation(profil.panel1, recProfil);
             }
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

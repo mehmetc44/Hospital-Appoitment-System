@@ -303,6 +303,7 @@
             Controls.Add(button1);
             Name = "Kayıt";
             Size = new Size(1208, 750);
+            Load += Kayıt_Load;
             ResumeLayout(false);
             PerformLayout();
         }

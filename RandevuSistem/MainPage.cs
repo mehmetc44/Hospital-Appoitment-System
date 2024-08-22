@@ -92,10 +92,10 @@ namespace RandevuSistem
             {
                 textBox2.Location = label7.Location;
                 textBox3.Location = label5.Location;
-                textBox4.Location = label3.Location;
+                textBox1.Location = label3.Location;
                 textBox2.Size = label7.Size;
                 textBox3.Size = label5.Size;
-                textBox4.Size = label3.Size;
+                textBox1.Size = label3.Size;
                 resize_Panel1(modernPanel1, recPanel1);
                 resize_Control_nosize(label1, recLbl1);
                 resize_elements_Panel1_nosize(label10, recLbl2);
@@ -212,7 +212,7 @@ namespace RandevuSistem
             person = await GetApiDataAsync(Form1Main.UserInfo.tc);
             textBox2.Visible = false;
             textBox3.Visible = false;
-            textBox4.Visible = false;
+            textBox1.Visible = false;
             button3.Visible = false;
             button4.Visible = false;
             Yas.Text = Hesaplamalar.YasHesapla(person.DogumTarihi).ToString();
@@ -225,22 +225,21 @@ namespace RandevuSistem
         {
         }
 
-        private async void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
             textBox2.Visible = true;
             textBox3.Visible = true;
-            textBox4.Visible = true;
+            textBox1.Visible = true;
             textBox2.Location = label7.Location;
             textBox3.Location = label5.Location;
-            textBox4.Location = label3.Location;
+            textBox1.Location = label3.Location;
             textBox2.Size = new Size(105, 60);
             textBox3.Size = new Size(105, 60);
-            textBox4.Size = new Size(105, 60);
+            textBox1.Size = new Size(105, 60);
             button3.Visible = true;
             button4.Visible = true;
             linkLabel1.Visible = false;
-
         }
         private async Task<Person> GetApiDataAsync(string tc)
         {
@@ -317,7 +316,7 @@ namespace RandevuSistem
         {
             person = new Person();
             person = await GetApiDataAsync(Form1Main.UserInfo.tc);
-            int boy = Int32.Parse(textBox4.Text);
+            int boy = Int32.Parse(textBox1.Text);
             int kilo = Int32.Parse(textBox3.Text);
             string telno = person.TelNo;
             int kanId = Hesaplamalar.GetKanGurubuId(textBox2.Text);
@@ -333,7 +332,7 @@ namespace RandevuSistem
             {
                 if ((boy < 300) && (boy > 0) && (kilo > 0) && (kilo < 400))
                 {
-                    if ((textBox4.Text == person.Boy) && (textBox2.Text == Hesaplamalar.GetKanGurubuById(kanId)) && (textBox3.Text == person.Kilo))
+                    if ((textBox1.Text == person.Boy) && (textBox2.Text == Hesaplamalar.GetKanGurubuById(kanId)) && (textBox3.Text == person.Kilo))
                     {
                         MessageBox.Show("Hiçbir değişiklik yapılmadı.");
                     }
@@ -356,7 +355,7 @@ namespace RandevuSistem
         {
             textBox2.Visible = false;
             textBox3.Visible = false;
-            textBox4.Visible = false;
+            textBox1.Visible = false;
             button3.Visible = false;
             button4.Visible = false;
             linkLabel1.Visible = true;
