@@ -36,7 +36,7 @@ namespace RandevuSistem
             label3 = new Label();
             label2 = new Label();
             panel2 = new ModernPanel();
-            textBox4 = new TextBox();
+            textBox1 = new TextBox();
             label5 = new Label();
             label4 = new Label();
             panel3 = new ModernPanel();
@@ -134,7 +134,7 @@ namespace RandevuSistem
             panel2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             panel2.BackColor = Color.FromArgb(18, 48, 70);
             panel2.BorderRadius = 30;
-            panel2.Controls.Add(textBox4);
+            panel2.Controls.Add(textBox1);
             panel2.Controls.Add(label2);
             panel2.Controls.Add(label3);
             panel2.Location = new Point(226, 350);
@@ -142,16 +142,16 @@ namespace RandevuSistem
             panel2.Size = new Size(184, 120);
             panel2.TabIndex = 3;
             // 
-            // textBox4
+            // textBox1
             // 
-            textBox4.BackColor = Color.FromArgb(18, 48, 70);
-            textBox4.Font = new Font("Nirmala UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox4.ForeColor = Color.FromArgb(0, 126, 249);
-            textBox4.Location = new Point(56, 23);
-            textBox4.Multiline = true;
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(75, 60);
-            textBox4.TabIndex = 15;
+            textBox1.BackColor = Color.FromArgb(18, 48, 70);
+            textBox1.Font = new Font("Nirmala UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
+            textBox1.ForeColor = Color.FromArgb(0, 126, 249);
+            textBox1.Location = new Point(56, 23);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(75, 60);
+            textBox1.TabIndex = 15;
             // 
             // label5
             // 
@@ -490,7 +490,7 @@ namespace RandevuSistem
         private PictureBox pictureBox1;
         private TextBox textBox2;
         private TextBox textBox3;
-        private TextBox textBox4;
+        private TextBox textBox1;
         private ModernButton button3;
         private ModernButton button4;
     }

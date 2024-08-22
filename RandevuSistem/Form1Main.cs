@@ -63,8 +63,8 @@ namespace RandevuSistem
             resize_Control(linkLabel2, recLink2);
             resize_Control_nosize(label2, recLbl2);
             resize_Panel(panel1, recPanel1);
-            this.pictureBox1.Size= new Size((this.Width)-(panel1.Size.Width),this.Size.Height);
-            this.pictureBox1.Location= new Point(panel1.Size.Width,0);
+            this.pictureBox1.Size = new Size((this.Width) - (panel1.Size.Width), this.Size.Height);
+            this.pictureBox1.Location = new Point(panel1.Size.Width, 0);
         }
         private void resize_Panel(Control c, Rectangle r)
         {
@@ -83,13 +83,10 @@ namespace RandevuSistem
             float yRatio = (float)(panel1.Height) / (float)(panelOriginal.Height);
             int newX = (int)(r.X * xRatio);
             int newY = (int)(r.Y * yRatio);
-
             int newWidth = (int)(r.Width * xRatio);
             int newHeight = (int)(r.Height * yRatio);
-
             c.Location = new Point(newX, newY);
             c.Size = new Size(newWidth, newHeight);
-
         }
         private void resize_Control_nosize(Control c, Rectangle r)
         {
@@ -118,27 +115,19 @@ namespace RandevuSistem
                 {
                     try
                     {
-                        // POST isteği gönderme
                         HttpResponseMessage response = await client.PostAsync(url, jsonContent);
-
-                        // Yanıtı kontrol etme
                         if (response.IsSuccessStatusCode)
                         {
-                            // Yanıtın içeriğini okuma
                             string responseData = await response.Content.ReadAsStringAsync();
                             MessageBox.Show(responseData);
                             if (responseData == "true")
-
                             {
-
                                 UserInfo.tc = textBox1.Text;
-
                                 this.Controls.Clear();
                                 MainMenu menu = new MainMenu();
                                 menu.Location = new System.Drawing.Point(0, 0); // Konumu belirleyin
                                 menu.Size = this.Parent.Size; // Boyutu belirleyin
                                 this.Controls.Add(menu);
-
                             }
                             else
                             {
@@ -156,10 +145,7 @@ namespace RandevuSistem
                     }
                 }
             }
-            else
-            {
-                MessageBox.Show("Eksik bilgi girdiniz.");
-            }
+            else{MessageBox.Show("Eksik bilgi girdiniz.");}
         }
         private void Form1Main_Load(object sender, EventArgs e)
         {
@@ -182,6 +168,10 @@ namespace RandevuSistem
             kayıt.Size = this.Parent.Size;
             kayıt.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             this.Controls.Add(kayıt);
+        }
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
