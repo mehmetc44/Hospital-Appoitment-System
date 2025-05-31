@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using System.Data;
 
-namespace Randevu_API.Model.DbContext
+namespace MedikApp.WebApi.Model.DbContext
 {
     public class Context
     {

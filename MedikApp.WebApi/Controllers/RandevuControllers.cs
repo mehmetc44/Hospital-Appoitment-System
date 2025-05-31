@@ -1,9 +1,9 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using MedikApp.DTO.RandevuDtos;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Randevu_API.Dtos.RandevuDtos;
-using Randevu_API.Repositories.RandevuRepositories;
-
-namespace Randevu_API.Controllers
+using MedikApp.DTO.PersonDtos;
+using MedikApp.WebApi.Repositories.RandevuRepositories;
+namespace MedikApp.WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -21,23 +21,11 @@ namespace Randevu_API.Controllers
         {
             try
             {
-                // Şehir verilerini al
                 var result = await _randevuRepo.Iller();
-
-                // Her bir IllerDto nesnesi üzerinde döngü yap ve bilgileri konsola yazdır
-                foreach (var illerDto in result)
-                {
-                    Console.WriteLine($"ID: {illerDto.Id}, Name: {illerDto.SehirAd}");
-                }
-
-                // Şehir verilerini JSON formatında döndür
                 return Ok(result);
             }
             catch (Exception ex)
             {
-                // Hata durumunda uygun bir yanıt döndür
-                // Loglama yapabilir ve uygun hata mesajını döndürebilirsiniz
-                // Burada basit bir hata yanıtı döndürülüyor
                 return StatusCode(StatusCodes.Status500InternalServerError, $"Internal server error: {ex.Message}");
             }
         }
@@ -45,16 +33,7 @@ namespace Randevu_API.Controllers
      [HttpGet("/RandevuControllers/Hastaneler")]
         public async Task<IActionResult> GetHastaneler(string SehirIsmi)
         {
-            // Hastane verilerini al
             var result = await _randevuRepo.Hastaneler(SehirIsmi);
-
-            // Her bir HastaneDto nesnesi üzerinde döngü yap ve bilgileri konsola yazdır
-            foreach (var hastaneDto in result)
-            {
-                Console.WriteLine($"ID: {hastaneDto.Id}, Name: {hastaneDto.hastane}");
-            }
-
-            // Hastane verilerini JSON formatında döndür
             return Ok(result);
         }
 

@@ -1,9 +1,9 @@
 ﻿using Dapper;
-using Randevu_API.Dtos.RandevuDtos;
-using Randevu_API.Model.DbContext;
-using System.Collections.Generic;  // IEnumerable<T> için gerekli
+using MedikApp.DTO.RandevuDtos;
+using MedikApp.WebApi.Model.DbContext;
+using System.Collections.Generic;
 
-namespace Randevu_API.Repositories.RandevuRepositories
+namespace MedikApp.WebApi.Repositories.RandevuRepositories
 {
     public class RandevuRepo : IRandevuRepo
     {
@@ -22,9 +22,7 @@ namespace Randevu_API.Repositories.RandevuRepositories
 
             using (var connection = _context.CreateConnection())
             {
-                // QueryAsync ile sonuçları HastaneDto tipinde al
                 var result = await connection.QueryAsync<HastaneDto>(getHastanelerQuery, parameters);
-                // Sonuçları bir listeye dönüştür
                 return result.ToList();
             }
         }
@@ -38,10 +36,7 @@ namespace Randevu_API.Repositories.RandevuRepositories
 
             using (var connection = _context.CreateConnection())
             {
-                // Asenkron olarak sorguyu çalıştır ve sonuçları DoktorDto tipinde al
                 var result = await connection.QueryAsync<DoktorDto>(getDoktorlarQuery, parameters);
-
-                // Sonuçları liste olarak döndür
                 return result.ToList();
             }
         }
@@ -52,10 +47,8 @@ namespace Randevu_API.Repositories.RandevuRepositories
 
             using (var connection = _context.CreateConnection())
             {
-                // Sorguyu çalıştır ve (int, string) tuple'larını al
                 var result = await connection.QueryAsync<IllerDto>(getIllerQuery);
 
-                // Tuple'lardan IllerDto nesnelerine dönüştür ve liste olarak döndür
                 return result.ToList();
             }
         }
@@ -66,10 +59,8 @@ namespace Randevu_API.Repositories.RandevuRepositories
 
             using (var connection = _context.CreateConnection())
             {
-                // `QueryAsync<string>` kullanarak şehir isimlerini içeren bir koleksiyon döndür
                 var result = await connection.QueryAsync<KliniklerDto>(getKliniklerQuery);
 
-                // Sonuçları `string[]` türüne dönüştür
                 return result.ToList();
             }
         }

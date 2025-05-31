@@ -1,8 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
-using Randevu_API.Dtos.KisilerDtos;
-using Randevu_API.Dtos.PersonDtos;
+﻿using MedikApp.DTO.PersonDtos;
+using Microsoft.AspNetCore.Http;
 
-namespace Randevu_API.Repositories.PersonRepositories
+namespace MedikApp.WebApi.Repositories.PersonRepositories
 {
     public interface IPersonRepo
     {

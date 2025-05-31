@@ -1,10 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Randevu_API.Dtos.KisilerDtos;
-using Randevu_API.Dtos.PersonDtos;
-using Randevu_API.Repositories.PersonRepositories;
+using MedikApp.DTO.PersonDtos;
+using MedikApp.WebApi.Repositories.PersonRepositories;
 
-namespace Randevu_API.Controllers
+namespace MedikApp.WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -21,7 +20,6 @@ namespace Randevu_API.Controllers
         public async Task<IActionResult> PersonLogin(PersonLoginDto personLoginDto)
         {
             var result = await _personRepo.PersonLogin(personLoginDto);
-
             return Ok(result);
         }
 
@@ -29,7 +27,6 @@ namespace Randevu_API.Controllers
         public async Task<IActionResult> PersonRegister(PersonRegisterDto personRegisterDto)
         {
             var result = await _personRepo.PersonRegister(personRegisterDto);
-            Console.Write(result);
             return Ok(new{ result.message,result.status});
         }
         [HttpPut("Kullanici/BilgileriGuncelle")]

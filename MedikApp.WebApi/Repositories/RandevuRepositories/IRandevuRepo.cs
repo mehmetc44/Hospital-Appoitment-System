@@ -1,7 +1,7 @@
-﻿using Randevu_API.Dtos.RandevuDtos;
+﻿using MedikApp.DTO.RandevuDtos;
 using System.Xml.Linq;
 
-namespace Randevu_API.Repositories.RandevuRepositories
+namespace MedikApp.WebApi.Repositories.RandevuRepositories
 {
     public interface IRandevuRepo
     {

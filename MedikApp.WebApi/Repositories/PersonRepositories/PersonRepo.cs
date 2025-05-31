@@ -1,11 +1,10 @@
 ﻿using Dapper;
+using MedikApp.DTO.PersonDtos;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Http;
-using Randevu_API.Dtos.KisilerDtos;
-using Randevu_API.Dtos.PersonDtos;
-using Randevu_API.Model.DbContext;
+using MedikApp.WebApi.Model.DbContext;
 
-namespace Randevu_API.Repositories.PersonRepositories
+namespace MedikApp.WebApi.Repositories.PersonRepositories
 {
     public class PersonRepo : IPersonRepo
     {
@@ -61,7 +60,6 @@ namespace Randevu_API.Repositories.PersonRepositories
 
             using (var connection = _context.CreateConnection())
             {
-                // Veriyi asenkron olarak al
                 var result = await connection.QueryFirstOrDefaultAsync<PersonInfoDto>(query, parameters);
 
                 return result;
@@ -70,23 +68,16 @@ namespace Randevu_API.Repositories.PersonRepositories
 
         public async Task<bool> PersonLogin(PersonLoginDto personLoginDto)
         {
-            // SQL sorgusu
             var loginQuery = "SELECT COUNT(1) FROM kisiler WHERE TcNumara = @tc AND Sifre = @sifre";
-
-            // Dapper için dinamik parametreler
             var parameters = new DynamicParameters();
             parameters.Add("@tc", personLoginDto.TcNumara);
             parameters.Add("@sifre", personLoginDto.Sifre);
 
             Console.Write(personLoginDto.TcNumara);
-            // Veritabanı bağlantısı ve sorgu işlemi
             using (var connection = _context.CreateConnection())
             {
-                // Sorguyu çalıştır ve sonucu al
                 var count = await connection.ExecuteScalarAsync<int>(loginQuery, parameters);
                 Console.Write(personLoginDto.TcNumara);
-
-                // Eğer sonuç 1 ise giriş başarılı, aksi halde başarısız
                 if (count > 0)
                 {
                     return true;
@@ -160,7 +151,6 @@ namespace Randevu_API.Repositories.PersonRepositories
 
             using (var connection = _context.CreateConnection())
             {
-                // Kişinin ID'sini al
                 var personId = await connection.ExecuteScalarAsync<int?>(getIdQuery, getIdParameters);
 
                 if (personId == null)
@@ -172,12 +162,10 @@ namespace Randevu_API.Repositories.PersonRepositories
                 var checkIdParameters = new DynamicParameters();
                 checkIdParameters.Add("@id", personId);
 
-                // saglik tablosunda ID'nin olup olmadığını kontrol et
                 var saglikExists = await connection.ExecuteScalarAsync<int>(checkIdQuery, checkIdParameters);
 
                 if (saglikExists > 0)
                 {
-                    // Kayıt varsa, güncelleme işlemi yap
                     var updateQuery = @"
                     UPDATE saglik 
                     SET Boy = @boy, 
@@ -201,7 +189,6 @@ namespace Randevu_API.Repositories.PersonRepositories
                 }
                 else
                 {
-                    // Kayıt yoksa, ekleme işlemi yap
                     var insertQuery = @"
                 INSERT INTO saglik (KisiId, Boy, Kilo, KanGurubu) 
                 VALUES (@kisiId, @boy, @kilo, @kangrubu); 
